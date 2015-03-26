@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Imie:</strong>
+  <%= @worker.imie %>
+</p>
+
+<p>
+  <strong>Nazwisko:</strong>
+  <%= @worker.nazwisko %>
+</p>
+
+<p>
+  <strong>Stanowisko:</strong>
+  <%= @worker.stanowisko %>
+</p>
+
+<p>
+  <strong>Pokoj:</strong>
+  <%= @worker.pokoj %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @worker.email %>
+</p>
+
+<p>
+  <strong>Wydzial:</strong>
+  <%= @worker.wydzial %>
+</p>
+
+<p>
+  <strong>Staz pracy:</strong>
+  <%= @worker.staz_pracy %>
+</p>
+
+<p>
+  <strong>Zdjecie:</strong>
+  <%= image_tag @worker.zdjecie.url(:thumb) %>
+</p>
+
+<%= link_to 'Edit', edit_worker_path(@worker) %> |
+<%= link_to 'Back', workers_path %>

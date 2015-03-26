@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  imie: MyString
+  nazwisko: MyString
+  stanowisko: MyString
+  pokoj: 1
+  email: MyString
+  wydzial: MyString
+  staz_pracy: 1
+  zdjecie: 
+
+two:
+  imie: MyString
+  nazwisko: MyString
+  stanowisko: MyString
+  pokoj: 1
+  email: MyString
+  wydzial: MyString
+  staz_pracy: 1
+  zdjecie: 

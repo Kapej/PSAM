@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= yield :title%>
+
+  <%=stylesheet_link_tag "jquery.fullPage.css" %>
+  <%= stylesheet_link_tag  "examples.css" %>
+  <%= stylesheet_link_tag "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" %>
+  <%= stylesheet_link_tag "application" %>
+
+  <%= javascript_include_tag "http://code.jquery.com/jquery-1.10.0.min.js" %>
+  <%= javascript_include_tag "http://code.jquery.com/ui/1.10.3/jquery-ui.min.js" %>
+  <%= javascript_include_tag "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" %>
+  <%= javascript_include_tag "animatedModal.js" %>
+  <%= javascript_include_tag "application" %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="fullpage">
+  <div class="section">
+    <a id="demo01" href="#modal-02">Autorzy</a>
+    <%= yield :hehe%>
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal1">
+    Launch demo modal
+    </button>
+  </div>
+  <div class="section">
+    <div class="slide"> Slide 1 </div>
+    <div class="slide"> Slide 2 </div>
+    <div class="slide"> Slide 3 </div>
+    <div class="slide"> Slide 4 </div>
+  </div>
+  <div class="section"><%= yield %></div>
+</div>
+
+
+
+<!--DEMO02-->
+<div id="modal-02">
+  <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
+  <div  id="btn-close-modal" class="close-modal-02">
+    CLOSE MODAL
+  </div>
+
+  <div class="modal-content">
+
+
+  </div>
+</div>
+
+
+</body>
+
+
+ <%= yield :boot %>
+
+
+<script>
+    $(document).ready(function() {
+        console.log("yes");
+        $(".pracownik").on('click',function(){
+            alert("klikniete");
+        });
+        $("#demo01").animatedModal({
+            modalTarget:'modal-02',
+            animatedIn:'lightSpeedIn',
+            animatedOut:'bounceOutDown',
+            color:'#3498db',
+            // Callbacks
+            beforeOpen: function() {
+                console.log("The animation was called");
+            },
+            afterOpen: function() {
+                console.log("The animation is completed");
+            },
+            beforeClose: function() {
+                console.log("The animation was called");
+            },
+            afterClose: function() {
+                console.log("The animation is completed");
+            }
+        });
+        $("#3").animatedModal({
+            modalTarget:'modal-03',
+            animatedIn:'lightSpeedIn',
+            animatedOut:'bounceOutDown',
+            color:'#3498db',
+            // Callbacks
+            beforeOpen: function() {
+                console.log("The animation was called");
+            },
+            afterOpen: function() {
+                console.log("The animation is completed");
+            },
+            beforeClose: function() {
+                console.log("The animation was called");
+            },
+            afterClose: function() {
+                console.log("The animation is completed");
+            }
+        });
+
+        $("#5").animatedModal(
+                {
+                    modalTarget:'modal-05',
+                    animatedIn:'lightSpeedIn',
+                    animatedOut:'bounceOutDown',
+                    color:'#3498db',
+                    // Callbacks
+                    beforeOpen: function() {
+                        console.log("The animation was called");
+                    },
+                    afterOpen: function() {
+                        console.log("The animation is completed");
+                    },
+                    beforeClose: function() {
+                        console.log("The animation was called");
+                    },
+                    afterClose: function() {
+                        console.log("The animation is completed");
+                    }
+                }
+        );
+        $('#fullpage').fullpage({
+            sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
+            anchors: ['firstPage', 'secondPage', '3rdPage'],
+            menu: '#menu',
+            loopTop: true,
+            loopBottom: true
+        });
+    });
+</script>
+</html>

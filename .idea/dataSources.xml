@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="362646825">
+    <data-source source="LOCAL" name="Rails PSAM: development" uuid="3d0e29a4-a584-4afa-91d3-fc80a7a812cb">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/slaski</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfc1dfdfdfd8dfd9dfdadfc2dfda</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails PSAM: test" uuid="48b2a7b5-b871-4253-8a22-622971095810">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/PSAM_test</jdbc-url>
+      <user-name>root</user-name>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails PSAM: production" uuid="0481031c-c441-4db2-9ef3-48afcdc37eb6">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/PSAM_production</jdbc-url>
+      <user-name>root</user-name>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
