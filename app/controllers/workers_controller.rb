@@ -1,5 +1,6 @@
 class WorkersController < ApplicationController
-  before_action :set_worker, only: [:show, :edit, :update, :destroy]
+  layout "dodawanie", :only => [:new, :show, :edit,:delete]
+  before_action :set_worker, only: [:show, :edit, :update, :delete]
 
   # GET /workers
   # GET /workers.json
@@ -31,7 +32,7 @@ class WorkersController < ApplicationController
         format.html { redirect_to @worker, notice: 'Worker was successfully created.' }
         format.json { render action: 'show', status: :created, location: @worker }
       else
-        format.html { render action: 'new' }
+        format.html { render action: 'new', :layout => "dodawanie"}
         format.json { render json: @worker.errors, status: :unprocessable_entity }
       end
     end
@@ -49,6 +50,15 @@ class WorkersController < ApplicationController
         format.json { render json: @worker.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def delete
+  end
+
+  def kasuj
+    worker = Worker.find(params[:id]).destroy
+    flash[:notice] = "Kategoria została pomyślnie usunięta"
+    redirect_to(:action=>'index')
   end
 
   # DELETE /workers/1

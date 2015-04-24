@@ -9,4 +9,22 @@
   <data-source source="LOCAL" name="Rails PSAM: production" uuid="0481031c-c441-4db2-9ef3-48afcdc37eb6">
     <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
+  <data-source source="LOCAL" name="Rails testpostgre: development" uuid="3ff2096a-2392-43fd-8e8f-c5c00c5289ba">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails testpostgre: test" uuid="f2254022-073e-40db-8356-897013191b80">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails testpostgre: production" uuid="530536c8-4fd7-4b3b-9bc1-4e967f975e69">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails mailertest: development" uuid="63a0c382-fb49-4925-9eec-09971c3ccff0">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails depot: development" uuid="c9acb436-5b9a-4254-acc1-11f5362c932a">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails depot: test" uuid="c90019db-6574-4765-ae7a-ec2a8427bd93">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
 </component>

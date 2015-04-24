@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/PSAM.iml" filepath="$PROJECT_DIR$/.idea/PSAM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Agile/depot/.idea/depot.iml" filepath="$PROJECT_DIR$/../Agile/depot/.idea/depot.iml" />
     </modules>
   </component>
 </project>

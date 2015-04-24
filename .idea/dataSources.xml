@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="362646825">
+  <component name="DataSourceManagerImpl" format="xml" hash="2017175251">
     <data-source source="LOCAL" name="Rails PSAM: development" uuid="3d0e29a4-a584-4afa-91d3-fc80a7a812cb">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
@@ -12,7 +12,7 @@
     <data-source source="LOCAL" name="Rails PSAM: test" uuid="48b2a7b5-b871-4253-8a22-622971095810">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1/PSAM_test</jdbc-url>
+      <jdbc-url>jdbc:mysql://127.0.0.1/slaski</jdbc-url>
       <user-name>root</user-name>
       <libraries />
     </data-source>
@@ -21,6 +21,46 @@
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://127.0.0.1/PSAM_production</jdbc-url>
       <user-name>root</user-name>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails testpostgre: development" uuid="3ff2096a-2392-43fd-8e8f-c5c00c5289ba">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:bazatest</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>df9bdf98df99df9edf9f</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails testpostgre: test" uuid="f2254022-073e-40db-8356-897013191b80">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:testpostgre_test</jdbc-url>
+      <user-name>testpostgre</user-name>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails testpostgre: production" uuid="530536c8-4fd7-4b3b-9bc1-4e967f975e69">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:testpostgre_production</jdbc-url>
+      <user-name>testpostgre</user-name>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails mailertest: development" uuid="63a0c382-fb49-4925-9eec-09971c3ccff0">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:F:\Programowanie\RoR\mailertest\db\development.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails depot: development" uuid="c9acb436-5b9a-4254-acc1-11f5362c932a">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:F:\Programowanie\RoR\Agile\depot\db\development.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails depot: test" uuid="c90019db-6574-4765-ae7a-ec2a8427bd93">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:F:\Programowanie\RoR\Agile\depot\db\test.sqlite3</jdbc-url>
       <libraries />
     </data-source>
   </component>

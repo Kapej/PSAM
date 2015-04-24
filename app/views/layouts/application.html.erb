@@ -3,51 +3,305 @@
 <head>
   <%= yield :title%>
 
-  <%=stylesheet_link_tag "jquery.fullPage.css" %>
-  <%= stylesheet_link_tag  "examples.css" %>
+
   <%= stylesheet_link_tag "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" %>
+  <%= stylesheet_link_tag "examples.css"%>
+  <%= stylesheet_link_tag "jquery.fullPage.css"%>
+
+
   <%= stylesheet_link_tag "application" %>
 
   <%= javascript_include_tag "http://code.jquery.com/jquery-1.10.0.min.js" %>
   <%= javascript_include_tag "http://code.jquery.com/ui/1.10.3/jquery-ui.min.js" %>
   <%= javascript_include_tag "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" %>
-  <%= javascript_include_tag "animatedModal.js" %>
   <%= javascript_include_tag "application" %>
 
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
 
+<ul id="menu">
+  <li data-menuanchor="firstPage"><a href="#firstPage">Film</a></li>
+  <li data-menuanchor="secondPage"><a href="#secondPage">Biometryka</a></li>
+  <li data-menuanchor="3rdPage"><a href="#3rdPage">Pracownicy</a></li>
+  <li data-menuanchor="4thPage"><a href="#4thPage">Partnerzy</a></li>
+</ul>
+
 <div id="fullpage">
-  <div class="section">
-    <a id="demo01" href="#modal-02">Autorzy</a>
-    <%= yield :hehe%>
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal1">
-    Launch demo modal
-    </button>
-  </div>
-  <div class="section">
-    <div class="slide"> Slide 1 </div>
-    <div class="slide"> Slide 2 </div>
-    <div class="slide"> Slide 3 </div>
-    <div class="slide"> Slide 4 </div>
-  </div>
-  <div class="section"><%= yield %></div>
-</div>
-
-
-
-<!--DEMO02-->
-<div id="modal-02">
-  <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
-  <div  id="btn-close-modal" class="close-modal-02">
-    CLOSE MODAL
-  </div>
-
-  <div class="modal-content">
-
+  <div class="section" id="filmowa">
+    <video autoplay loop muted controls="true" id="myVideo">
+      <source src=<%= asset_path 'film.mp4' %> type="video/mp4">
+    </video>
+    <div class="layer">
+      <h1>fullPage.js videos</h1>
+    </div>
 
   </div>
+      <div class="section">
+            <div class="slide">
+                <div class="intro">
+                      <h1>Biometryka</h1>
+                      <p>
+                        Technika dokonywania pomiarów istot żywych. W najnowszych zastosowaniach ukierunkowana jest na metody automatycznego rozpoznawania
+                        ludzi na podstawie ich cech fizycznych. Przykładem urządzeń do pomiarów biometrycznych na podstawie których można identyfikować
+                        konkretne osoby jest system rozpoznawania tęczówki oka rejestrujący obraz tęczówki oka.
+                      </p>
+                </div>
+            </div>
+            <div class="slide">
+
+                    <div class="slide-content container">
+
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <h1>Odciski palców</h1>
+                        </div>
+                      </div>
+
+                      <div class="row partial-head">
+                        <div class="col-lg-4 ">
+                          <h1>Analiza odcisków linii papilarnych</h1>
+                        </div>
+                        <div class="col-lg-4 partial-head">
+                          <h1>Technologia biometryczna</h1>
+                        </div>
+                        <div class="col-lg-4 partial-head">
+                          <h1>Skanowanie Lini Papilarnych </h1>
+                        </div>
+                      </div>
+
+                      <div class="row">
+
+                        <div class="col-lg-4 partial-describe">
+                          <p>Analiza odcisków linii papilarnych jest najstarszą spośród wszystkich metod biometrycznych. Już w starożytnym Babilonie i Chinach używano odciśniętego palca jako potwierdzenia przeprowadzenia transakcji handlowej. Przez 1200 lat nie odkryto skuteczniejszej metody identyfikacji.</p>
+                        </div>
+                        <div class="col-lg-4 partial-describe">
+                          <p>Działanie biometrycznych czytników jest bardzo skuteczne. Jak wiadomo DNA każdego człowieka jest niepowtarzalne. Nie bez powodu nazywane jest często genetycznym odciskiem palca. W istocie odcisk palca daje 99% pewności podczas procesu identyfikacji.</p>
+                        </div>
+                        <div class="col-lg-4 partial-describe">
+                          <p>Linie papilarne palca są skanowane przez specjalny czujnik, wmontowany w system zabezpieczający. Następnie jego zapis zostaje przetworzony w cyfrowy kod, na podstawie którego weryfikuje się danego użytkownika. Zatem nie obraz palca(odcisk), ale wyznaczany za pomocą algorytmu rozpoznania matematyczny odpowiednik tegoż obrazu jest porównywany z matrycą. </p>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+
+            <div class="slide">
+              <div class="slide-content container">
+
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h1>Rozpoznawanie i analiza obrazów</h1>
+                  </div>
+                </div>
+
+                <div class="row">
+
+                  <div class="col-lg-4 partial-head">
+                   <h1>Analiza</h1>
+                  </div>
+
+                  <div class="col-lg-4 partial-head">
+                    <h1>System rozpoznawania obrazów</h1>
+                  </div>
+
+                  <div class="col-lg-4 partial-head">
+                    <h1>Selekcja cech i ich właściwości</h1>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-4 partial-describe">
+                    <p>Końcowym etapem analizy obrazów może być nie tylko identyfikacja obiektów analizy oraz ich ilościowa charakterystyka ale również
+                    klasyfikacja obiektów i ich symboliczna interpretacja, te ostatnie często są określane terminem rozpowania obrazu.</p>
+                  </div>
+
+                  <div class="col-lg-4 partial-describe">
+                    <dl>
+                      <dt>Przetwarzanie nieskiego poziomu</dt>
+                      <dd>obejmuje akwizycje obrazu, przetwarzanie wstępne, poprawę jakości obrazu, np. eliminacja zakłóceń, poprawa kontrastu</dd>
+                    </dl>
+
+                    <dl>
+                      <dt>Przetwarzanie średniego poziomu</dt>
+                      <dd>dotyczy segmentacji obrau oraz wydzielania i opisu cech obiektów obrazu, np. detekcja brzegów i konturów</dd>
+                    </dl>
+
+                    <dl>
+                      <dt>Przetwarzanie wysokiego poziomu</dt>
+                      <dd>polega na klasyfikacji, rozpoznawaniu i interpretacji analizowanej sceny</dd>
+                    </dl>
+
+                  </div>
+
+                  <div class="col-lg-4 partial-describe">
+                    <ul>
+                      <li><span class="li-begin">dyskryminacja</span> - cechy powinny przyjmowac znaczaco różne wartości
+                      dla obiektów z róznych klas, np. średnica owocu jest dobrą cechą dla rozróżnienie wiśni i grejfrutów,
+                      </li>
+
+                      <li>
+                        <span class="li-begin">niezawodność</span> - cechy powinny przyjmować podobne wartości dla wszystkich obiektów danej klasy, np.
+                        kolor jest złą cechą dla jabłek,
+                      </li>
+
+                      <li><span class="li-begin">niezależność</span> - cechy wykorzystywane w danym systemie klasyfikacyjnym powinny być nieskorelowane ze sobą,
+                        np waga i wielkość owocu są cechami silnie skorelowanymi,
+                      </li>
+
+                      <li><span class="li-begin">mała liczba</span> - złożoność systemu klasyfikacji rośnie szybko wraz z liczbami klasyfikowanych cech, np.
+                      należy eliminować cech skorelowane</li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="slide-content">
+                <h1>Rozpoznawanie chodu</h1>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="slide-content container">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h1>Rozpoznawanie głosu/mowy</h1>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-4 partial-head">
+                    <h1>Co to jest?</h1>
+                  </div>
+
+                  <div class="col-lg-8 partial-head">
+                    <h1>Rodzaje rozpoznawania mowy pod względem...</h1>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-4 partial-describe">
+                    <p>Technologia pozwalająca komputerowi lub innemu urządzeniu interpretować mowę ludzką, na przykład do celów transkrypcji lub jako alternatywną metodę interakcji.</p>
+                  </div>
+
+                  <div class="col-lg-8 partial-describe li-left">
+
+                    <div role="tabpanel" >
+
+                      <!-- Nav tabs -->
+                      <ul class="nav nav-tabs" role="tablist" id="myTab" >
+                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Segmentacji rozpoznawanej wypowiedzi</a></li>
+                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Czasu odpowiedzi</a></li>
+                        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Stopnia zależności od mówcy</a></li>
+                      </ul>
+
+                      <!-- Tab panes -->
+                      <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active fade in" id="home">
+                          <ul class="circle-mark">
+                            <li>rozpoznawanie pojedynczych fonemów (przy przestarzałych systemach, lub dla słów spoza słownika, modelu języka),</li><br/>
+                            <li>rozpoznawanie izolowanych słów (system wymaga znacznych pauz między wypowiadanymi wyrazami),</li><br/>
+                          </ul>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="profile">
+                          <ul class="circle-mark">
+                              <li>rozpoznawanie mowy w czasie rzeczywistym - system podaje wyniki niemal równolegle z pobieraniem, danych wejściowych, za pomocą urządzenia do próbkowania dźwięku (np. karty dźwiękowej z mikrofonem),</li><br/>
+                              <li>transkrypcja zasobów akustycznych, uprzednio zdigitalizowanych do plików, np. celem indeksowania/przeszukiwania.</li>
+                          </ul>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="messages">
+                          <ul class="circle-mark">
+                            <li>zależne od mówcy,</li><br/>
+                            <li>zależne od grupy mówców,</li><br/>
+                            <li>niezależne od mówcy.</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="slide-content container">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h1>Rozpoznawanie wzorców</h1>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-4 partial-head">
+                    <h1>Co to jest?</h1>
+                  </div>
+
+                  <div class="col-lg-4 partial-head">
+                    <h1>Do czego dąży?</h1>
+                  </div>
+
+                  <div class="col-lg-4 partial-head">
+                    <h1>Z czego się składa?</h1>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-4 partial-describe">
+                    <p>pole badawcze w obrębie uczenia maszynowego. Może być definiowane jako działanie polegające na pobieraniu
+                      surowych danych i podejmowaniu dalszych czynności zależnych od kategorii do której należą te dane.</p>
+                  </div>
+
+                  <div class="col-lg-4 partial-describe">
+                    <p>W rozpoznawaniu wzorców dąży się do klasyfikacji danych (wzorców) w oparciu o wiedzę aprioryczną lub o informacje uzyskane na drodze
+                      statystycznej analizy danych służącej wydobywaniu cech obiektów. Klasyfikowane wzorce to zazwyczaj grupy wyników
+                      pomiaru lub obserwacji definiujące położenie odpowiadających im punktów w wielowymiarowej przestrzeni cech.</p>
+                  </div>
+
+                  <div class="col-lg-4 partial-describe">
+                    <ul class="circle-mark">
+                      <li>czujnika, który dostarcza obserwacji, które mają być klasyfikowane lub opisywane</li><br/>
+                      <li>mechanizmu wydobywania cech, które najlepiej charakteryzują i separują klasę, do której dana obserwacyjna należ</li><br/>
+                      <li>schematu decyzyjnego lub schematu opisywania, który realizuje właściwą część procesu
+                        klasyfikacji lub opisywania obserwacji w oparciu o wydobyte cechy obiektów oraz o wiedzę a priori.</li><br/>
+                    </ul>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+      </div>
+      <div class="section">
+        <div class="intro">
+          <h1>Pracownicy</h1>
+        </div>
+        <%= yield %>
+      </div>
+
+      <div class="section partners">
+        <div class="intro container">
+          <div class="row">
+            <div class="col-lg-12">
+              <h1>Partnerzy</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4"><a href="http://mit.us.edu.pl/cms/"><%= image_tag "us/logo2.png", height: 200, width: 200 %></a></div>
+            <div class="col-lg-4"><a href="https://www.us.edu.pl/"><%= image_tag "us/lol.jpg", height: 200, width: 300 %></a></div>
+            <div class="col-lg-4"><a href="http://www.biometrics.us.edu.pl/"><%= image_tag "us/biometrics logo.gif", height: 200, width: 200 %></a></div>
+          </div>
+        </div>
+
+      </div>
+
 </div>
 
 
@@ -102,33 +356,19 @@
             }
         });
 
-        $("#5").animatedModal(
-                {
-                    modalTarget:'modal-05',
-                    animatedIn:'lightSpeedIn',
-                    animatedOut:'bounceOutDown',
-                    color:'#3498db',
-                    // Callbacks
-                    beforeOpen: function() {
-                        console.log("The animation was called");
-                    },
-                    afterOpen: function() {
-                        console.log("The animation is completed");
-                    },
-                    beforeClose: function() {
-                        console.log("The animation was called");
-                    },
-                    afterClose: function() {
-                        console.log("The animation is completed");
-                    }
-                }
-        );
+
         $('#fullpage').fullpage({
-            sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
-            anchors: ['firstPage', 'secondPage', '3rdPage'],
+            sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#FFFFFF'],
+            anchors: ['firstPage', 'secondPage', '3rdPage','4thPage'],
             menu: '#menu',
-            loopTop: true,
-            loopBottom: true
+            autoScrolling: false,
+            fitToSection: false,
+            afterRender: function(){
+
+
+                //playing the video
+                $('video').get(0).play();
+            }
         });
     });
 </script>

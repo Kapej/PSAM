@@ -1,0 +1,82 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.intro h1 , .slide-content h1{
+    color: aliceblue;
+    font-size: 50px;
+}
+
+.partial-head h1{
+    font-size:25px;
+}
+
+.partial-describe dt{
+font-size: 17px;
+}
+.partial-describe p{
+    font-size:15px;
+    color: black;
+}
+
+.li-begin{
+    font-weight: bold;
+}
+.li-left li{
+     text-align: left;
+     font-size:13px;
+     color: black;
+ }
+
+.li-left li a{
+    color: black;
+}
+
+.circle-mark{
+    list-style-type: circle;
+}
+
+.partners h1{
+    color: #000000;
+}
+.partners a:hover{
+background-color: #ffffff;
+}
+
+
+.button-new{
+    text-align: center;
+}
+
+#myVideo{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    /* in case the video doesn't fit the whole page*/
+    background: black url("app/assets/images/film.mp4") center center;
+    background-size: contain;
+    object-fit: cover; /*cover video background */
+    z-index:3;
+}
+
+.lewa-strona {
+    margin-left: 250px;
+}
+
+.prawa-strona {
+  margin-left:700px;
+}
+
+.modalne-opisy{
+    text-align: center;
+}
+.modalne-opisy p{
+    font-size: 15px;
+}
+
+
+

@@ -1,0 +1,38 @@
+// Place all the styles related to the Dostep controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.login-site{
+  margin-top: 100px;
+}
+
+.login-submit{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.success-text{
+  text-align: center;
+}
+
+.bg-success{
+  margin-top: 15px;
+  height: 50px;
+  border-radius: 15px;
+  p{
+    padding-top: 15px;
+  }
+
+}
+
+.user-label{
+  padding-right: 15px;
+}
+
+.user-tag{
+  margin-bottom: 5px;
+}
+
+

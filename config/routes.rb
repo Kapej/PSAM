@@ -1,6 +1,10 @@
 PSAM::Application.routes.draw do
+  get "dostep/index"
+  get "dostep/login"
+  get "dostep/logowanie"
   resources :workers
 
+  match ':controller(/:action(/:id))', :via => [:get, :post]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -8,6 +12,10 @@ PSAM::Application.routes.draw do
   # root 'welcome#index'
 
   root 'workers#index'
+
+  get 'dodaj/ziomeczka', to: 'workers#new'
+
+  get 'admin', to: 'dostep#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
