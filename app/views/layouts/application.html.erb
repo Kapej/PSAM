@@ -5,14 +5,13 @@
 
 
   <%= stylesheet_link_tag "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" %>
-  <%= stylesheet_link_tag "examples.css"%>
   <%= stylesheet_link_tag "jquery.fullPage.css"%>
 
 
   <%= stylesheet_link_tag "application" %>
 
-  <%= javascript_include_tag "http://code.jquery.com/jquery-1.10.0.min.js" %>
-  <%= javascript_include_tag "http://code.jquery.com/ui/1.10.3/jquery-ui.min.js" %>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" %>
+  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.4/vendors/jquery.slimscroll.js" %>
   <%= javascript_include_tag "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" %>
   <%= javascript_include_tag "application" %>
 
@@ -317,45 +316,6 @@
         $(".pracownik").on('click',function(){
             alert("klikniete");
         });
-        $("#demo01").animatedModal({
-            modalTarget:'modal-02',
-            animatedIn:'lightSpeedIn',
-            animatedOut:'bounceOutDown',
-            color:'#3498db',
-            // Callbacks
-            beforeOpen: function() {
-                console.log("The animation was called");
-            },
-            afterOpen: function() {
-                console.log("The animation is completed");
-            },
-            beforeClose: function() {
-                console.log("The animation was called");
-            },
-            afterClose: function() {
-                console.log("The animation is completed");
-            }
-        });
-        $("#3").animatedModal({
-            modalTarget:'modal-03',
-            animatedIn:'lightSpeedIn',
-            animatedOut:'bounceOutDown',
-            color:'#3498db',
-            // Callbacks
-            beforeOpen: function() {
-                console.log("The animation was called");
-            },
-            afterOpen: function() {
-                console.log("The animation is completed");
-            },
-            beforeClose: function() {
-                console.log("The animation was called");
-            },
-            afterClose: function() {
-                console.log("The animation is completed");
-            }
-        });
-
 
         $('#fullpage').fullpage({
             sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#FFFFFF'],
