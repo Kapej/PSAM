@@ -17,6 +17,8 @@ PSAM::Application.routes.draw do
 
   get 'admin', to: 'dostep#index'
 
+  get 'login', to: 'dostep#index'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

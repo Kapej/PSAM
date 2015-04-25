@@ -26,7 +26,7 @@ class DostepController < ApplicationController
       flash[:notice] = "Zostałeś poprawnie zalogowany."
       redirect_to(:action => 'index')
     else
-      flash[:notice] = "błąd: niepoprawna nazwa użytkownika lub hasło."
+      flash[:notice] = "Błąd: niepoprawna nazwa użytkownika lub hasło."
       redirect_to(:action => 'login')
     end
 
