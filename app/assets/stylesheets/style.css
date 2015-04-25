@@ -1,6 +1,10 @@
 body{
     font-family: 'Open Sans', sans-serif;
 }
+
+h1{
+    margin-bottom: 50px;
+}
 .intro h1 , .slide-content h1{
     color: aliceblue;
     font-size: 50px;
@@ -56,6 +60,7 @@ background-color: #ffffff;
     width: 100%;
     height: 100%;
     background-size: 100% 100%;
+    background: black url("app/assets/images/film.mp4") center center;
     /* in case the video doesn't fit the whole page*/
     background-size: contain;
     object-fit: fill; /*cover video background */

@@ -95,6 +95,8 @@ p{
     color: #000;
     background: #ffffff;
     background: rgba(255, 255, 255, 0.50);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
 }
 #menu li.active a:hover{
 	color: #000;
