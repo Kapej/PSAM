@@ -1,0 +1,8 @@
+es:
+
+  layouts:
+    application:
+      title:  "Biometryka"
+      some: "Technika dokonywania pomiarów istot żywych. W najnowszych zastosowaniach ukierunkowana jest na metody automatycznego rozpoznawania
+                                      ludzi na podstawie ich cech fizycznych. Przykładem urządzeń do pomiarów biometrycznych na podstawie których można identyfikować
+                                      konkretne osoby jest system rozpoznawania tęczówki oka rejestrujący obraz tęczówki oka."

@@ -20,4 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+
+  layouts:
+    application:
+      title:  "Biometrics"
+      some: "The technique of measuring living things. In the latest applications is focused on methods for automatic recognition
+                                                    people based on their physical characteristics. An example of a device for measuring biometric which it can be identified
+                                                    specific person's iris recognition system recording the image of the iris."

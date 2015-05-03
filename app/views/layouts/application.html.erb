@@ -34,12 +34,17 @@
       <div class="section">
             <div class="slide">
                 <div class="intro">
-                      <h1>Biometryka</h1>
+                      <h1><%=t('.title')%></h1>
                       <p>
-                        Technika dokonywania pomiarów istot żywych. W najnowszych zastosowaniach ukierunkowana jest na metody automatycznego rozpoznawania
-                        ludzi na podstawie ich cech fizycznych. Przykładem urządzeń do pomiarów biometrycznych na podstawie których można identyfikować
-                        konkretne osoby jest system rozpoznawania tęczówki oka rejestrujący obraz tęczówki oka.
+                        <%=t('.some') %>
                       </p>
+                  <%= form_tag home_path, class: 'locale' do %>
+                      <%= select_tag 'set_locale',
+                                     options_for_select(LANGUAGES, I18n.locale.to_s),
+                                     onchange: 'this.form.submit()' %>
+                      <%= submit_tag 'submit' %>
+                      <%= javascript_tag "$('.locale input').hide()" %>
+                  <% end %>
                 </div>
             </div>
             <div class="slide">

@@ -1,8 +1,12 @@
 PSAM::Application.routes.draw do
-  get "dostep/index"
-  get "dostep/login"
-  get "dostep/logowanie"
-  resources :workers
+
+
+
+    resources :workers
+
+    root 'workers#index', as: 'home', via: :all
+
+
 
   match ':controller(/:action(/:id))', :via => [:get, :post]
   # The priority is based upon order of creation: first created -> highest priority.
@@ -11,13 +15,15 @@ PSAM::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
-  root 'workers#index'
+
 
   get 'dodaj/ziomeczka', to: 'workers#new'
 
-  get 'admin', to: 'dostep#index'
+  get '/admin', to: 'dostep#index'
 
-  get 'login', to: 'dostep#index'
+  get '/login', to: 'dostep#login'
+
+  post '/logowanie', to: 'dostep#logowanie'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
