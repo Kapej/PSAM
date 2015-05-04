@@ -6,3 +6,54 @@ es:
       some: "Technika dokonywania pomiarów istot żywych. W najnowszych zastosowaniach ukierunkowana jest na metody automatycznego rozpoznawania
                                       ludzi na podstawie ich cech fizycznych. Przykładem urządzeń do pomiarów biometrycznych na podstawie których można identyfikować
                                       konkretne osoby jest system rozpoznawania tęczówki oka rejestrujący obraz tęczówki oka."
+      workers: "Pracownicy"
+      partners: "Partnerzy"
+      film: "Film"
+      finger_title: "Odciski palców"
+      finger_title_part_one: "Analiza odcisków linii papilarnych"
+      finger_title_part_two: "Technologia biometryczna"
+      finger_title_part_three: "Skanowanie Lini Papilarnych"
+      finger_body_part_one: "Analiza odcisków linii papilarnych jest najstarszą spośród wszystkich metod biometrycznych. Już w starożytnym Babilonie i Chinach używano odciśniętego palca jako potwierdzenia przeprowadzenia transakcji handlowej. Przez 1200 lat nie odkryto skuteczniejszej metody identyfikacji."
+      finger_body_part_two: "Działanie biometrycznych czytników jest bardzo skuteczne. Jak wiadomo DNA każdego człowieka jest niepowtarzalne. Nie bez powodu nazywane jest często genetycznym odciskiem palca. W istocie odcisk palca daje 99% pewności podczas procesu identyfikacji."
+      finger_body_part_three: "Linie papilarne palca są skanowane przez specjalny czujnik, wmontowany w system zabezpieczający. Następnie jego zapis zostaje przetworzony w cyfrowy kod, na podstawie którego weryfikuje się danego użytkownika. Zatem nie obraz palca(odcisk), ale wyznaczany za pomocą algorytmu rozpoznania matematyczny odpowiednik tegoż obrazu jest porównywany z matrycą. "
+      face_title: "Rozpoznawanie i analiza obrazów"
+      face_title_part_one: "Analiza"
+      face_title_part_two: "System rozpoznawania obrazów"
+      face_title_part_three: "Selekcja cech i ich właściwości"
+      face_body_part_one: Końcowym etapem analizy obrazów może być nie tylko identyfikacja obiektów analizy oraz ich ilościowa charakterystyka ale również klasyfikacja obiektów i ich symboliczna interpretacja, te ostatnie często są określane terminem rozpowania obrazu."
+      face_body_part_two_title_part_one: "Przetwarzanie nieskiego poziomu"
+      face_body_part_two_title_part_two: "Przetwarzanie średniego poziomu "
+      face_body_part_two_title_part_three: "Przetwarzanie wysokiego poziomu "
+      face_body_part_two_body_part_one: "obejmuje akwizycje obrazu, przetwarzanie wstępne, poprawę jakości obrazu, np. eliminacja zakłóceń, poprawa kontrastu "
+      face_body_part_two_body_part_two: "dotyczy segmentacji obrau oraz wydzielania i opisu cech obiektów obrazu, np. detekcja brzegów i konturów "
+      face_body_part_two_body_part_three: "polega na klasyfikacji, rozpoznawaniu i interpretacji analizowanej sceny"
+      face_body_part_three_title_part_one: "dyskryminacja"
+      face_body_part_three_title_part_two: "niezawodność"
+      face_body_part_three_title_part_three: "niezależność "
+      face_body_part_three_title_part_four: "mała liczba "
+      face_body_part_three_body_part_one: "cechy powinny przyjmowac znaczaco różne wartości dla obiektów z róznych klas, np. średnica owocu jest dobrą cechą dla rozróżnienie wiśni i grejfrutów "
+      face_body_part_three_body_part_two: "cechy powinny przyjmować podobne wartości dla wszystkich obiektów danej klasy, np. kolor jest złą cechą dla jabłek "
+      face_body_part_three_body_part_three: "cechy wykorzystywane w danym systemie klasyfikacyjnym powinny być nieskorelowane ze sobą, np waga i wielkość owocu są cechami silnie skorelowanymi "
+      face_body_part_three_body_part_four: "złożoność systemu klasyfikacji rośnie szybko wraz z liczbami klasyfikowanych cech, np. należy eliminować cech skorelowane "
+      voice_title: "Rozpoznawanie głosu"
+      voice_title_part_one: "Co to jest?"
+      voice_title_part_two: "Rodzaje rozpoznawania mowy pod względem..."
+      voice_body_part_one: "Technologia pozwalająca komputerowi lub innemu urządzeniu interpretować mowę ludzką, na przykład do celów transkrypcji lub jako alternatywną metodę interakcji."
+      voide_body_part_two_title_part_one: "Segmentacji rozpoznawanej wypowiedzi"
+      voide_body_part_two_title_part_two: "Czasu odpowiedzi "
+      voide_body_part_two_title_part_three: "Stopnia zależności od mówcy"
+      voice_body_part_two_body_part_one_text_part_one: "rozpoznawanie pojedynczych fonemów (przy przestarzałych systemach, lub dla słów spoza słownika, modelu języka)"
+      voice_body_part_two_body_part_one_text_part_two: "rozpoznawanie izolowanych słów (system wymaga znacznych pauz między wypowiadanymi wyrazami)"
+      voice_body_part_two_body_part_two_text_part_one: "ozpoznawanie mowy w czasie rzeczywistym - system podaje wyniki niemal równolegle z pobieraniem, danych wejściowych, za pomocą urządzenia do próbkowania dźwięku (np. karty dźwiękowej z mikrofonem)"
+      voice_body_part_two_body_part_two_text_part_two: "transkrypcja zasobów akustycznych, uprzednio zdigitalizowanych do plików, np. celem indeksowania/przeszukiwania."
+      voice_body_part_two_body_part_three_text_part_one: "zależne od mówcy"
+      voice_body_part_two_body_part_three_text_part_two: "zależne od grupy mówców"
+      voice_body_part_two_body_part_three_text_part_three: "niezależne od mówcy"
+
+
+
+
+
+
+
+

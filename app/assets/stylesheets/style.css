@@ -5,13 +5,19 @@ body{
 h1{
     margin-bottom: 50px;
 }
-.intro h1 , .slide-content h1{
+.slide-content h1{
     color: aliceblue;
+    font-size: 50px;
+}
+
+.intro h1{
+    color: black;
     font-size: 50px;
 }
 
 .partial-head h1{
     font-size:25px;
+    color: #fafffb;
 }
 
 .partial-describe dt{
@@ -85,6 +91,35 @@ background-color: #ffffff;
 .labels-center{
     text-align: center;
 }
+
+.jumbotron{
+    width: 75%;
+
+    margin: auto auto;
+    border-radius: 15px;
+}
+
+.panel-group{
+    width: 100%;
+    margin: auto auto;
+}
+
+.finger_one{
+    margin-left: 250px;
+}
+
+.finger_two{
+    margin-left: -500px;
+}
+
+.image_head{
+    margin-bottom: 50px;
+}
+
+#biometric_title{
+    color: #CC0000;
+}
+
 
 
 

@@ -19,10 +19,10 @@
 <body>
 
 <ul id="menu">
-  <li data-menuanchor="firstPage"><a href="#firstPage">Film</a></li>
-  <li data-menuanchor="secondPage"><a href="#secondPage">Biometryka</a></li>
-  <li data-menuanchor="3rdPage"><a href="#3rdPage">Pracownicy</a></li>
-  <li data-menuanchor="4thPage"><a href="#4thPage">Partnerzy</a></li>
+  <li data-menuanchor="firstPage"><a href="#firstPage"><%= t('.film') %></a></li>
+  <li data-menuanchor="secondPage"><a href="#secondPage"><%= t('.title') %></a></li>
+  <li data-menuanchor="3rdPage"><a href="#3rdPage"><%= t('.workers') %></a></li>
+  <li data-menuanchor="4thPage"><a href="#4thPage"><%= t('.partners') %></a></li>
 </ul>
 
 <div id="fullpage">
@@ -33,14 +33,12 @@
   </div>
       <div class="section">
             <div class="slide">
-                <div class="intro">
-                      <h1><%=t('.title')%></h1>
+                <div class="intro jumbotron">
+                      <h1 id="biometric_title"><%=t('.title')%></h1>
                       <p>
                         <%=t('.some') %>
                       </p>
-                  <% if notice %>
-                      <p id="notice"><%= notice %></p>
-                  <% end %>
+
                   <%= form_tag home_path, class: 'locale' do %>
                       <%= select_tag 'set_locale',
                                      options_for_select(LANGUAGES, I18n.locale.to_s),
@@ -48,40 +46,72 @@
                       <%= submit_tag 'submit' %>
                       <%= javascript_tag "$('.locale input').hide()" %>
                   <% end %>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-4"><%= image_tag "us/odcisk.png", height: '125', width: '85', class: 'JumboFinger'%></div>
+                      <div class="col-lg-4"><%= image_tag "us/url.png", height: '125', width: '100', class: 'JumboFace'%></div>
+                      <div class="col-lg-4"><%= image_tag "us/voice.png", height: '125', width: '100', class: 'JumboZiom'%></div>
+                    </div>
+                  </div>
+
                 </div>
             </div>
             <div class="slide">
 
                     <div class="slide-content container">
 
-                      <div class="row">
-                        <div class="col-lg-12">
-                          <h1>Odciski palców</h1>
+
+                      <div class="row image_head">
+                        <div class="col-lg-1">
+                          <%= image_tag "us/odcisk2.png", height: '125', width: '85', class: 'finger_one'%>
+                        </div>
+
+                        <div class="col-lg-10">
+                          <h1><%= t('.finger_title') %></h1>
+                        </div>
+
+                        <div class="col-lg-1">
+                          <%= image_tag "us/odcisk.png", height: '125', width: '85', class: 'finger_two'%>
                         </div>
                       </div>
 
                       <div class="row partial-head">
                         <div class="col-lg-4 ">
-                          <h1>Analiza odcisków linii papilarnych</h1>
+                          <h1><%= t('.finger_title_part_one') %></h1>
                         </div>
                         <div class="col-lg-4 partial-head">
-                          <h1>Technologia biometryczna</h1>
+                          <h1><%= t('.finger_title_part_two') %></h1>
                         </div>
                         <div class="col-lg-4 partial-head">
-                          <h1>Skanowanie Lini Papilarnych </h1>
+                          <h1><%= t('.finger_title_part_three') %></h1>
                         </div>
                       </div>
 
                       <div class="row">
 
                         <div class="col-lg-4 partial-describe">
-                          <p>Analiza odcisków linii papilarnych jest najstarszą spośród wszystkich metod biometrycznych. Już w starożytnym Babilonie i Chinach używano odciśniętego palca jako potwierdzenia przeprowadzenia transakcji handlowej. Przez 1200 lat nie odkryto skuteczniejszej metody identyfikacji.</p>
+                          <div class="panel panel-default">
+                            <div class="panel-body">
+                              <p><%= t('.finger_body_part_one') %></p>
+                            </div>
+                          </div>
                         </div>
+
                         <div class="col-lg-4 partial-describe">
-                          <p>Działanie biometrycznych czytników jest bardzo skuteczne. Jak wiadomo DNA każdego człowieka jest niepowtarzalne. Nie bez powodu nazywane jest często genetycznym odciskiem palca. W istocie odcisk palca daje 99% pewności podczas procesu identyfikacji.</p>
+                          <div class="panel panel-default">
+                            <div class="panel-body">
+                              <p><%= t('.finger_body_part_two') %></p>
+                            </div>
+                          </div>
                         </div>
+
                         <div class="col-lg-4 partial-describe">
-                          <p>Linie papilarne palca są skanowane przez specjalny czujnik, wmontowany w system zabezpieczający. Następnie jego zapis zostaje przetworzony w cyfrowy kod, na podstawie którego weryfikuje się danego użytkownika. Zatem nie obraz palca(odcisk), ale wyznaczany za pomocą algorytmu rozpoznania matematyczny odpowiednik tegoż obrazu jest porównywany z matrycą. </p>
+                          <div class="panel panel-default">
+                            <div class="panel-body">
+                              <p><%= t('.finger_body_part_three') %></p>
+                            </div>
+                          </div>
+
                         </div>
                       </div>
                     </div>
@@ -90,198 +120,267 @@
             <div class="slide">
               <div class="slide-content container">
 
+                <div class="row image_head">
+                  <div class="col-lg-3"></div>
+                  <div class="col-lg-2">
+                    <%= image_tag "us/url.png", height: '100',width: '100' %>
+                  </div>
+                  <div class="col-lg-2">
+                    <%= image_tag "us/arrow.png", height: '100',width: '200' %>
+                  </div>
+                  <div class="col-lg-2">
+                    <%= image_tag "us/Julia-Angwin-1024x1024.png", height: '100',width: '100' %>
+                  </div>
+                  <div class="col-lg-3"></div>
+                </div>
+
                 <div class="row">
                   <div class="col-lg-12">
-                    <h1>Rozpoznawanie i analiza obrazów</h1>
+                    <h1><%= t('.face_title') %></h1>
                   </div>
                 </div>
 
                 <div class="row">
 
                   <div class="col-lg-4 partial-head">
-                   <h1>Analiza</h1>
+                   <h1><%= t('.face_title_part_one') %></h1>
                   </div>
 
                   <div class="col-lg-4 partial-head">
-                    <h1>System rozpoznawania obrazów</h1>
+                    <h1><%= t('.face_title_part_two') %></h1>
                   </div>
 
                   <div class="col-lg-4 partial-head">
-                    <h1>Selekcja cech i ich właściwości</h1>
+                    <h1><%= t('.face_title_part_three') %></h1>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="col-lg-4 partial-describe">
-                    <p>Końcowym etapem analizy obrazów może być nie tylko identyfikacja obiektów analizy oraz ich ilościowa charakterystyka ale również
-                    klasyfikacja obiektów i ich symboliczna interpretacja, te ostatnie często są określane terminem rozpowania obrazu.</p>
+
+                    <div class="panel panel-default">
+                      <div class="panel-body">
+                        <p><%= t('.face_body_part_one')%></p>
+                      </div>
+                    </div>
                   </div>
 
                   <div class="col-lg-4 partial-describe">
-                    <dl>
-                      <dt>Przetwarzanie nieskiego poziomu</dt>
-                      <dd>obejmuje akwizycje obrazu, przetwarzanie wstępne, poprawę jakości obrazu, np. eliminacja zakłóceń, poprawa kontrastu</dd>
-                    </dl>
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              <%= t('.face_body_part_two_title_part_one') %>
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                          <div class="panel-body">
+                            <%= t('.face_body_part_two_body_part_one') %>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                          <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              <%= t('.face_body_part_two_title_part_two') %>
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                          <div class="panel-body">
+                            <%= t('.face_body_part_two_body_part_two') %>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                          <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              <%= t('.face_body_part_two_title_part_three') %>
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                          <div class="panel-body">
+                            <%= t('.face_body_part_two_body_part_three') %>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-                    <dl>
-                      <dt>Przetwarzanie średniego poziomu</dt>
-                      <dd>dotyczy segmentacji obrau oraz wydzielania i opisu cech obiektów obrazu, np. detekcja brzegów i konturów</dd>
-                    </dl>
-
-                    <dl>
-                      <dt>Przetwarzanie wysokiego poziomu</dt>
-                      <dd>polega na klasyfikacji, rozpoznawaniu i interpretacji analizowanej sceny</dd>
-                    </dl>
 
                   </div>
 
                   <div class="col-lg-4 partial-describe">
-                    <ul>
-                      <li><span class="li-begin">dyskryminacja</span> - cechy powinny przyjmowac znaczaco różne wartości
-                      dla obiektów z róznych klas, np. średnica owocu jest dobrą cechą dla rozróżnienie wiśni i grejfrutów,
-                      </li>
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                              <%= t('.face_body_part_three_title_part_one') %>
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
+                          <div class="panel-body">
+                            <%= t('.face_body_part_three_body_part_one') %>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                          <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                              <%= t('.face_body_part_three_title_part_two') %>
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                          <div class="panel-body">
+                            <%= t('.face_body_part_three_body_part_two') %>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                          <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                              <%= t('.face_body_part_three_title_part_three') %>
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                          <div class="panel-body">
+                             <%= t('.face_body_part_three_body_part_three') %>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                              <%= t('.face_body_part_three_title_part_four') %>
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                          <div class="panel-body">
+                            <%= t('.face_body_part_three_body_part_four') %>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-                      <li>
-                        <span class="li-begin">niezawodność</span> - cechy powinny przyjmować podobne wartości dla wszystkich obiektów danej klasy, np.
-                        kolor jest złą cechą dla jabłek,
-                      </li>
-
-                      <li><span class="li-begin">niezależność</span> - cechy wykorzystywane w danym systemie klasyfikacyjnym powinny być nieskorelowane ze sobą,
-                        np waga i wielkość owocu są cechami silnie skorelowanymi,
-                      </li>
-
-                      <li><span class="li-begin">mała liczba</span> - złożoność systemu klasyfikacji rośnie szybko wraz z liczbami klasyfikowanych cech, np.
-                      należy eliminować cech skorelowane</li>
-
-                    </ul>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div class="slide">
-              <div class="slide-content">
-                <h1>Rozpoznawanie chodu</h1>
               </div>
             </div>
 
             <div class="slide">
               <div class="slide-content container">
+
+                <div class="row image_head">
+                  <div class="col-lg-4"></div>
+                  <div class="col-lg-2">
+                    <%= image_tag "us/image.png", height: '100',width: '100' %>
+                  </div>
+                  <div class="col-lg-2">
+                    <%= image_tag "us/voice.png", height: '100',width: '100' %>
+                  </div>
+                  <div class="col-lg-4"></div>
+                </div>
+
                 <div class="row">
                   <div class="col-lg-12">
-                    <h1>Rozpoznawanie głosu/mowy</h1>
+                    <h1><%=t('.voice_title') %></h1>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="col-lg-4 partial-head">
-                    <h1>Co to jest?</h1>
+                    <h1><%=t('.voice_title_part_one') %></h1>
                   </div>
 
                   <div class="col-lg-8 partial-head">
-                    <h1>Rodzaje rozpoznawania mowy pod względem...</h1>
+                    <h1><%=t('.voice_title_part_two') %></h1>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="col-lg-4 partial-describe">
-                    <p>Technologia pozwalająca komputerowi lub innemu urządzeniu interpretować mowę ludzką, na przykład do celów transkrypcji lub jako alternatywną metodę interakcji.</p>
+                    <div class="panel panel-default">
+                      <div class="panel-body">
+                        <p><%=t('.voice_body_part_one') %></p>
+                      </div>
+                    </div>
                   </div>
 
                   <div class="col-lg-8 partial-describe li-left">
-
-                    <div role="tabpanel" >
-
-                      <!-- Nav tabs -->
-                      <ul class="nav nav-tabs" role="tablist" id="myTab" >
-                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Segmentacji rozpoznawanej wypowiedzi</a></li>
-                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Czasu odpowiedzi</a></li>
-                        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Stopnia zależności od mówcy</a></li>
-                      </ul>
-
-                      <!-- Tab panes -->
-                      <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active fade in" id="home">
-                          <ul class="circle-mark">
-                            <li>rozpoznawanie pojedynczych fonemów (przy przestarzałych systemach, lub dla słów spoza słownika, modelu języka),</li><br/>
-                            <li>rozpoznawanie izolowanych słów (system wymaga znacznych pauz między wypowiadanymi wyrazami),</li><br/>
-                          </ul>
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+                              <%=t('.voide_body_part_two_title_part_one') %>
+                            </a>
+                          </h4>
                         </div>
-                        <div role="tabpanel" class="tab-pane fade" id="profile">
-                          <ul class="circle-mark">
-                              <li>rozpoznawanie mowy w czasie rzeczywistym - system podaje wyniki niemal równolegle z pobieraniem, danych wejściowych, za pomocą urządzenia do próbkowania dźwięku (np. karty dźwiękowej z mikrofonem),</li><br/>
-                              <li>transkrypcja zasobów akustycznych, uprzednio zdigitalizowanych do plików, np. celem indeksowania/przeszukiwania.</li>
-                          </ul>
-                        </div>
-                        <div role="tabpanel" class="tab-pane fade" id="messages">
-                          <ul class="circle-mark">
-                            <li>zależne od mówcy,</li><br/>
-                            <li>zależne od grupy mówców,</li><br/>
-                            <li>niezależne od mówcy.</li>
-                          </ul>
+                        <div id="collapseEight" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingEight">
+                          <div class="panel-body">
+                            <ul class="circle-mark">
+                              <li><%=t('.voice_body_part_two_body_part_one_text_part_one') %></li><br/>
+                              <li><%=t('.voice_body_part_two_body_part_one_text_part_two') %></li><br/>
+                            </ul>
+                          </div>
                         </div>
                       </div>
-
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                          <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                              <%=t('.voide_body_part_two_title_part_two') %>
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                          <div class="panel-body">
+                            <ul class="circle-mark">
+                              <li><%=t('.voice_body_part_two_body_part_two_text_part_one') %></li><br/>
+                              <li><%=t('.voice_body_part_two_body_part_two_text_part_two') %></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTen">
+                          <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                              <%=t('.voide_body_part_two_title_part_three') %>
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                          <div class="panel-body">
+                            <ul class="circle-mark">
+                              <li><%=t('.voice_body_part_two_body_part_three_text_part_one') %></li><br/>
+                              <li><%=t('.voice_body_part_two_body_part_three_text_part_two') %></li><br/>
+                              <li><%=t('.voice_body_part_two_body_part_three_text_part_three') %></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                   </div>
                   </div>
                 </div>
-
-
               </div>
-            </div>
-
-            <div class="slide">
-              <div class="slide-content container">
-                <div class="row">
-                  <div class="col-lg-12">
-                    <h1>Rozpoznawanie wzorców</h1>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-lg-4 partial-head">
-                    <h1>Co to jest?</h1>
-                  </div>
-
-                  <div class="col-lg-4 partial-head">
-                    <h1>Do czego dąży?</h1>
-                  </div>
-
-                  <div class="col-lg-4 partial-head">
-                    <h1>Z czego się składa?</h1>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-lg-4 partial-describe">
-                    <p>pole badawcze w obrębie uczenia maszynowego. Może być definiowane jako działanie polegające na pobieraniu
-                      surowych danych i podejmowaniu dalszych czynności zależnych od kategorii do której należą te dane.</p>
-                  </div>
-
-                  <div class="col-lg-4 partial-describe">
-                    <p>W rozpoznawaniu wzorców dąży się do klasyfikacji danych (wzorców) w oparciu o wiedzę aprioryczną lub o informacje uzyskane na drodze
-                      statystycznej analizy danych służącej wydobywaniu cech obiektów. Klasyfikowane wzorce to zazwyczaj grupy wyników
-                      pomiaru lub obserwacji definiujące położenie odpowiadających im punktów w wielowymiarowej przestrzeni cech.</p>
-                  </div>
-
-                  <div class="col-lg-4 partial-describe">
-                    <ul class="circle-mark">
-                      <li>czujnika, który dostarcza obserwacji, które mają być klasyfikowane lub opisywane</li><br/>
-                      <li>mechanizmu wydobywania cech, które najlepiej charakteryzują i separują klasę, do której dana obserwacyjna należ</li><br/>
-                      <li>schematu decyzyjnego lub schematu opisywania, który realizuje właściwą część procesu
-                        klasyfikacji lub opisywania obserwacji w oparciu o wydobyte cechy obiektów oraz o wiedzę a priori.</li><br/>
-                    </ul>
-                  </div>
-
-                </div>
-
-              </div>
-            </div>
-
       </div>
       <div class="section">
         <div class="intro">
-          <h1>Pracownicy</h1>
+          <h1><%= t('.workers')%></h1>
         </div>
         <%= yield %>
       </div>
@@ -290,7 +389,7 @@
         <div class="intro container">
           <div class="row">
             <div class="col-lg-12">
-              <h1>Partnerzy</h1>
+              <h1><%= t('.partners')%></h1>
             </div>
           </div>
           <div class="row">
@@ -318,7 +417,7 @@
         });
 
         $('#fullpage').fullpage({
-            sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#FFFFFF'],
+            sectionsColor: ['#1bbc9b', '#CC0000', '#00B2B2', '#FFFFFF'],
             anchors: ['firstPage', 'secondPage', '3rdPage','4thPage'],
             menu: '#menu',
             autoScrolling: false,
