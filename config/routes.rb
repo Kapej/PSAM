@@ -1,34 +1,26 @@
 PSAM::Application.routes.draw do
 
-
-
     resources :workers
 
-
-      root 'workers#index', as: 'home', via: :all
-      match ':controller(/:action(/:id))', :via => [:get, :post]
-
-
-
-
-
-
-
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  scope '(:locale)' do
+    root 'workers#index', as: 'home', via: :all
+    get '/admin', to: 'dostep#index'
+    post '/logowanie', to: 'dostep#logowanie'
+    get '/login/user', to: 'dostep#login'
+    match ':controller(/:action(/:id))', :via => [:get, :post]
+  end
 
 
 
-  get 'dodaj/ziomeczka', to: 'workers#new'
 
-  get '/admin', to: 'dostep#index'
 
-  get '/login', to: 'dostep#login'
+    get 'dodaj/ziomeczka', to: 'workers#new'
 
-  post '/logowanie', to: 'dostep#logowanie'
+
+
+
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

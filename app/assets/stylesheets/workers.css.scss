@@ -2,3 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#set_locale{
+  position: relative ;
+  right:-500px;
+  top: 250px;
+  z-index: auto;
+}

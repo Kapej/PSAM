@@ -5,6 +5,9 @@ class WorkersController < ApplicationController
   # GET /workers
   # GET /workers.json
   def index
+    if params[:set_locale]
+      redirect_to home_path(locale: params[:set_locale])
+    end
     @workers = Worker.all
   end
 
