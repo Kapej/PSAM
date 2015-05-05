@@ -3,7 +3,6 @@
 <head>
   <%= yield :title%>
 
-
   <%= stylesheet_link_tag "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" %>
   <%= stylesheet_link_tag "application" %>
 
@@ -14,8 +13,8 @@
 
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
-
 </head>
+
 <body>
 
 <ul id="menu">
@@ -31,6 +30,7 @@
       <source src=<%= asset_path 'film.mp4' %> type="video/mp4">
     </video>
   </div>
+
       <div class="section">
             <div class="slide">
                 <div class="intro jumbotron">
@@ -38,14 +38,13 @@
                       <p>
                         <%=t('.some') %>
                       </p>
-
-                  <%= form_tag home_path, class: 'locale' do %>
-                      <%= select_tag 'set_locale',
-                                     options_for_select(LANGUAGES, I18n.locale.to_s),
-                                     onchange: 'this.form.submit()'%>
-                      <%= submit_tag 'submit' %>
-                      <%= javascript_tag "$('.locale input').hide()" %>
-                  <% end %>
+                      <%= form_tag home_path, class: 'locale' do %>
+                          <%= select_tag 'set_locale',
+                                         options_for_select(LANGUAGES, I18n.locale.to_s),
+                                         onchange: 'this.form.submit()'%>
+                          <%= submit_tag 'submit' %>
+                          <%= javascript_tag "$('.locale input').hide()" %>
+                      <% end %>
                   <div class="container">
                     <div class="row">
                       <div class="col-lg-4"><%= image_tag "us/odcisk.png", height: '125', width: '85', class: 'JumboFinger'%></div>
@@ -53,15 +52,13 @@
                       <div class="col-lg-4"><%= image_tag "us/voice.png", height: '125', width: '100', class: 'JumboZiom'%></div>
                     </div>
                   </div>
-
                 </div>
             </div>
             <div class="slide">
 
                     <div class="slide-content container">
-
-
                       <div class="row image_head">
+
                         <div class="col-lg-1">
                           <%= image_tag "us/odcisk2.png", height: '125', width: '85', class: 'finger_one'%>
                         </div>
@@ -73,18 +70,23 @@
                         <div class="col-lg-1">
                           <%= image_tag "us/odcisk.png", height: '125', width: '85', class: 'finger_two'%>
                         </div>
+
                       </div>
 
                       <div class="row partial-head">
+
                         <div class="col-lg-4 ">
                           <h1><%= t('.finger_title_part_one') %></h1>
                         </div>
+
                         <div class="col-lg-4 partial-head">
                           <h1><%= t('.finger_title_part_two') %></h1>
                         </div>
+
                         <div class="col-lg-4 partial-head">
                           <h1><%= t('.finger_title_part_three') %></h1>
                         </div>
+
                       </div>
 
                       <div class="row">
@@ -111,8 +113,8 @@
                               <p><%= t('.finger_body_part_three') %></p>
                             </div>
                           </div>
-
                         </div>
+
                       </div>
                     </div>
             </div>
@@ -122,16 +124,21 @@
 
                 <div class="row image_head">
                   <div class="col-lg-3"></div>
+
                   <div class="col-lg-2">
                     <%= image_tag "us/url.png", height: '100',width: '100' %>
                   </div>
+
                   <div class="col-lg-2">
                     <%= image_tag "us/arrow.png", height: '100',width: '200' %>
                   </div>
+
                   <div class="col-lg-2">
                     <%= image_tag "us/Julia-Angwin-1024x1024.png", height: '100',width: '100' %>
                   </div>
+
                   <div class="col-lg-3"></div>
+
                 </div>
 
                 <div class="row">
@@ -163,6 +170,7 @@
                         <p><%= t('.face_body_part_one')%></p>
                       </div>
                     </div>
+
                   </div>
 
                   <div class="col-lg-4 partial-describe">
@@ -210,8 +218,6 @@
                         </div>
                       </div>
                     </div>
-
-
                   </div>
 
                   <div class="col-lg-4 partial-describe">
@@ -273,7 +279,6 @@
                         </div>
                       </div>
                     </div>
-
                   </div>
                 </div>
               </div>
@@ -284,13 +289,17 @@
 
                 <div class="row image_head">
                   <div class="col-lg-4"></div>
+
                   <div class="col-lg-2">
                     <%= image_tag "us/image.png", height: '100',width: '100' %>
                   </div>
+
                   <div class="col-lg-2">
                     <%= image_tag "us/voice.png", height: '100',width: '100' %>
                   </div>
+
                   <div class="col-lg-4"></div>
+
                 </div>
 
                 <div class="row">
@@ -373,16 +382,20 @@
                         </div>
                       </div>
                     </div>
-                   </div>
                   </div>
                 </div>
               </div>
+            </div>
       </div>
+
       <div class="section">
+
         <div class="intro">
           <h1><%= t('.workers')%></h1>
         </div>
+
         <%= yield %>
+
       </div>
 
       <div class="section partners">
@@ -399,10 +412,7 @@
           </div>
         </div>
       </div>
-
-</div>
-
-
+  </div>
 </body>
 
 
@@ -427,8 +437,19 @@
 
                 //playing the video
                 $('video').get(0).play();
+            },
+            afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+                var animation = "animated shake";
+                var animationStop = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
+                if(index==2 && slideIndex==2){
+                    $('.slide-content h1').addClass(animation).one(animationStop,function(){
+                        $(this).removeClass(animation);
+                    });
+                }
             }
+
         });
     });
 </script>
+
 </html>
