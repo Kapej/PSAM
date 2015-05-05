@@ -14,4 +14,6 @@ $(document).ready(function(){
     $('.JumboZiom').click(function(){
         $.fn.fullpage.moveTo(2, 3);
     });
+
+
 });
