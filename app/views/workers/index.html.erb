@@ -27,10 +27,12 @@
                     <div class="modal-body">
                       <div class="containter-fluid">
                         <div class="row modalne-opisy">
-                          <div class="col-md-2"><p><%= image_tag worker.zdjecie.url(:medium) %></p></div>
+                          <div class="col-md-2"><%= image_tag worker.zdjecie.url(:medium) %></div>
                           <div class="col-md-10"><p>Email: <%=worker.email %></p></div>
                           <div class="col-md-10"><p> Staż pracy: <%=worker.staz_pracy %></p></div>
                           <div class="col-md-10"><p> Stanowisko:<%=worker.stanowisko %></p></div>
+                          <div class="col-md-10"><p> Wydział:<%=worker.wydzial %></p></div>
+                          <div class="col-md-10"><p> Pokój:<%=worker.pokoj %></p></div>
                         </div>
 
 
@@ -87,10 +89,12 @@
                     <div class="modal-body">
                         <div class="containter-fluid">
                           <div class="row modalne-opisy">
-                            <div class="col-md-2"><p><%= image_tag worker.zdjecie.url(:medium) %></p></div>
-                            <div class="col-md-10"><p> Email:<%=worker.email %></p></div>
-                            <div class="col-md-10"><p> Staż pracy:<%=worker.staz_pracy %></p></div>
-                            <div class="col-md-10"><p> Stanowisko:<%=worker.stanowisko %></p></div>
+                            <div class="col-md-2"><%= image_tag worker.zdjecie.url(:medium) %></div>
+                            <div class="col-md-10"><p> <span class="pull-left">Email:</span><%=worker.email %></p></div>
+                            <div class="col-md-10"><p> <span class="pull-left">Staż pracy:</span><%=worker.staz_pracy %></p></div>
+                            <div class="col-md-10"><p> <span class="pull-left">Stanowisko:</span><%=worker.stanowisko %></p></div>
+                            <div class="col-md-10"><p> <span class="pull-left">Wydział:</span><%=worker.wydzial %></p></div>
+                            <div class="col-md-10"><p> <span class="pull-left">Pokój:</span><%=worker.pokoj %></p></div>
                           </div>
                         </div>
                     </div>

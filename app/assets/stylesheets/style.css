@@ -82,10 +82,15 @@ background-color: #ffffff;
 }
 
 .modalne-opisy{
-    text-align: center;
+    text-align: left;
 }
 .modalne-opisy p{
     font-size: 15px;
+    margin-left: 50px;
+}
+
+.modalne-opisy span{
+
 }
 
 .labels-center{
