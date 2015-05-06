@@ -27,18 +27,45 @@
                     <div class="modal-body">
                       <div class="containter-fluid">
                         <div class="row modalne-opisy">
-                          <div class="col-md-2"><%= image_tag worker.zdjecie.url(:medium) %></div>
-                          <div class="col-md-10"><p>Email: <%=worker.email %></p></div>
-                          <div class="col-md-10"><p> Staż pracy: <%=worker.staz_pracy %></p></div>
-                          <div class="col-md-10"><p> Stanowisko:<%=worker.stanowisko %></p></div>
-                          <div class="col-md-10"><p> Wydział:<%=worker.wydzial %></p></div>
-                          <div class="col-md-10"><p> Pokój:<%=worker.pokoj %></p></div>
+                          <div class="col-md-12">
+                              <table class="table table-striped">
+                                <tr>
+                                  <td rowspan="6">
+                                    <%= image_tag worker.zdjecie.url(:medium) %>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>Email:</td>
+                                  <td><%=worker.email%></td>
+                                </tr>
+                                <tr>
+                                  <td>Staż pracy:</td>
+                                  <td><%=worker.staz_pracy %></td>
+                                </tr>
+                                <tr>
+                                  <td>Stanowisko pracy:</td>
+                                  <td><%=worker.stanowisko %></td>
+                                </tr>
+                                <tr>
+                                  <td>Wydział: </td>
+                                  <td><%=worker.wydzial %></td>
+                                </tr>
+                                <tr>
+                                  <td>Pokój</td>
+                                  <td><%=worker.pokoj%></td>
+                                </tr>
+                              </table>
+                          </div>
+                        </div>
+                        <div class="row modalna_mapa">
+                          <div class="col-lg-12">
+
+                          </div>
                         </div>
                       </div>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                   </div>
                 </div>
@@ -86,18 +113,45 @@
                     <div class="modal-body">
                         <div class="containter-fluid">
                           <div class="row modalne-opisy">
-                            <div class="col-md-2"><%= image_tag worker.zdjecie.url(:medium) %></div>
-                            <div class="col-md-10"><p> <span class="pull-left">Email:</span><%=worker.email %></p></div>
-                            <div class="col-md-10"><p> <span class="pull-left">Staż pracy:</span><%=worker.staz_pracy %></p></div>
-                            <div class="col-md-10"><p> <span class="pull-left">Stanowisko:</span><%=worker.stanowisko %></p></div>
-                            <div class="col-md-10"><p> <span class="pull-left">Wydział:</span><%=worker.wydzial %></p></div>
-                            <div class="col-md-10"><p> <span class="pull-left">Pokój:</span><%=worker.pokoj %></p></div>
+                            <div class="col-md-12">
+                              <table class="table table-striped">
+                                <tr>
+                                  <td rowspan="6">
+                                    <%= image_tag worker.zdjecie.url(:medium) %>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>Email:</td>
+                                  <td><%=worker.email%></td>
+                                </tr>
+                                <tr>
+                                  <td>Staż pracy:</td>
+                                  <td><%=worker.staz_pracy %></td>
+                                </tr>
+                                <tr>
+                                  <td>Stanowisko pracy:</td>
+                                  <td><%=worker.stanowisko %></td>
+                                </tr>
+                                <tr>
+                                  <td>Wydział: </td>
+                                  <td><%=worker.wydzial %></td>
+                                </tr>
+                                <tr>
+                                  <td>Pokój</td>
+                                  <td><%=worker.pokoj%></td>
+                                </tr>
+                              </table>
+                            </div>
+                          </div>
+                          <div class="row modalna_mapa">
+                            <div class="col-lg-12">
+
+                            </div>
                           </div>
                         </div>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                   </div>
                 </div>

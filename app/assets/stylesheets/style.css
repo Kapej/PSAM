@@ -89,8 +89,17 @@ background-color: #ffffff;
     margin-left: 50px;
 }
 
-.modalne-opisy span{
+.modalne-opisy table{
+    margin:auto auto;
+    width: 70%;
+}
 
+.modalne-opisy td{
+    vertical-align: middle;
+}
+
+.modalne-opisy img{
+    margin: 30px 15px;
 }
 
 .labels-center{
