@@ -111,10 +111,40 @@ background-color: #ffffff;
 
 .finger_one{
     margin-left: 250px;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-duration: 1s;
+    -moz-animation-delay: 0s;
+    -moz-animation-iteration-count: infinite;
 }
 
 .finger_two{
     margin-left: -500px;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-duration: 1s;
+    -moz-animation-delay: 1.5s;
+    -moz-animation-iteration-count: infinite;
+}
+
+.arrow_image{
+    -webkit-animation-duration: 3s;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-duration: 3s;
+    -moz-animation-delay: 1s;
+    -moz-animation-iteration-count: infinite;
+}
+
+.voice_image{
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-duration: 1s;
+    -moz-animation-delay: 1.5s;
+    -moz-animation-iteration-count: infinite;
 }
 
 .image_head{
@@ -124,6 +154,57 @@ background-color: #ffffff;
 #biometric_title{
     color: #CC0000;
 }
+
+.cisco h1{
+    margin-top:-100px;
+    color: aliceblue;
+}
+
+#cisco_body{
+    float: left;
+    text-align: left;
+    width:100%;
+}
+
+
+.cisco_contact{
+    margin-top: 30px;
+}
+
+.cisco_contact p{
+
+    width: auto;
+}
+
+.cisco_contact h2{
+    font-size: 30px;
+    color: aliceblue;
+    margin-bottom: 45px;
+}
+
+.cisco_contact address{
+    text-align: center;
+}
+
+.galeria h1{
+    margin-top: -150px;
+}
+
+.galeria img{
+    padding: 30px 50px;
+}
+
+.galeria img:hover{
+    background-color: #434D5A;
+    border-radius: 15px;
+
+}
+
+.biometric_images{
+    margin-top: 30px;
+}
+
+
 
 
 

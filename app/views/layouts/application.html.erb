@@ -17,11 +17,22 @@
 
 <body>
 
+<%= form_tag home_path, class: 'locale' do %>
+    <%= select_tag 'set_locale',
+                   options_for_select(LANGUAGES, I18n.locale.to_s),
+                   onchange: 'this.form.submit()'%>
+    <%= submit_tag 'submit' %>
+    <%= javascript_tag "$('.locale input').hide()" %>
+<% end %>
+
+
 <ul id="menu">
   <li data-menuanchor="firstPage"><a href="#firstPage"><%= t('.film') %></a></li>
   <li data-menuanchor="secondPage"><a href="#secondPage"><%= t('.title') %></a></li>
   <li data-menuanchor="3rdPage"><a href="#3rdPage"><%= t('.workers') %></a></li>
-  <li data-menuanchor="4thPage"><a href="#4thPage"><%= t('.partners') %></a></li>
+  <li data-menuanchor="4thPage"><a href="#4thPage">Akademia CISCO</a></li>
+  <li data-menuanchor="5thPage"><a href="#5thPage">Fotki</a></li>
+  <li data-menuanchor="6thPage"><a href="#6thPage"><%= t('.partners') %></a></li>
 </ul>
 
 <div id="fullpage">
@@ -38,14 +49,8 @@
                       <p>
                         <%=t('.some') %>
                       </p>
-                      <%= form_tag home_path, class: 'locale' do %>
-                          <%= select_tag 'set_locale',
-                                         options_for_select(LANGUAGES, I18n.locale.to_s),
-                                         onchange: 'this.form.submit()'%>
-                          <%= submit_tag 'submit' %>
-                          <%= javascript_tag "$('.locale input').hide()" %>
-                      <% end %>
-                  <div class="container">
+
+                  <div class="container biometric_images">
                     <div class="row">
                       <div class="col-lg-4"><%= image_tag "us/odcisk.png", height: '125', width: '85', class: 'JumboFinger'%></div>
                       <div class="col-lg-4"><%= image_tag "us/url.png", height: '125', width: '100', class: 'JumboFace'%></div>
@@ -130,7 +135,7 @@
                   </div>
 
                   <div class="col-lg-2">
-                    <%= image_tag "us/arrow.png", height: '100',width: '200' %>
+                    <%= image_tag "us/arrow.png", height: '100',width: '200', class:"arrow_image" %>
                   </div>
 
                   <div class="col-lg-2">
@@ -179,11 +184,11 @@
                         <div class="panel-heading" role="tab" id="headingOne">
                           <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                              <%= t('.face_body_part_two_title_part_one') %>
+                              <%= t('.face_body_part_two_title_part_one') %>&nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                             </a>
                           </h4>
                         </div>
-                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                           <div class="panel-body">
                             <%= t('.face_body_part_two_body_part_one') %>
                           </div>
@@ -193,7 +198,7 @@
                         <div class="panel-heading" role="tab" id="headingTwo">
                           <h4 class="panel-title">
                             <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                              <%= t('.face_body_part_two_title_part_two') %>
+                              <%= t('.face_body_part_two_title_part_two') %>&nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                             </a>
                           </h4>
                         </div>
@@ -207,7 +212,7 @@
                         <div class="panel-heading" role="tab" id="headingThree">
                           <h4 class="panel-title">
                             <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                              <%= t('.face_body_part_two_title_part_three') %>
+                              <%= t('.face_body_part_two_title_part_three') %>&nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                             </a>
                           </h4>
                         </div>
@@ -226,7 +231,7 @@
                         <div class="panel-heading" role="tab" id="headingFour">
                           <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                              <%= t('.face_body_part_three_title_part_one') %>
+                              <%= t('.face_body_part_three_title_part_one') %>&nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                             </a>
                           </h4>
                         </div>
@@ -240,7 +245,7 @@
                         <div class="panel-heading" role="tab" id="headingFive">
                           <h4 class="panel-title">
                             <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                              <%= t('.face_body_part_three_title_part_two') %>
+                              <%= t('.face_body_part_three_title_part_two') %>&nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                             </a>
                           </h4>
                         </div>
@@ -254,7 +259,7 @@
                         <div class="panel-heading" role="tab" id="headingSix">
                           <h4 class="panel-title">
                             <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                              <%= t('.face_body_part_three_title_part_three') %>
+                              <%= t('.face_body_part_three_title_part_three') %>&nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                             </a>
                           </h4>
                         </div>
@@ -268,7 +273,7 @@
                         <div class="panel-heading" role="tab" id="headingSeven">
                           <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                              <%= t('.face_body_part_three_title_part_four') %>
+                              <%= t('.face_body_part_three_title_part_four') %>&nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                             </a>
                           </h4>
                         </div>
@@ -295,7 +300,7 @@
                   </div>
 
                   <div class="col-lg-2">
-                    <%= image_tag "us/voice.png", height: '100',width: '100' %>
+                    <%= image_tag "us/voice.png", height: '100',width: '100', class: 'voice_image' %>
                   </div>
 
                   <div class="col-lg-4"></div>
@@ -333,7 +338,7 @@
                         <div class="panel-heading" role="tab" id="headingEight">
                           <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
-                              <%=t('.voide_body_part_two_title_part_one') %>
+                              <%=t('.voide_body_part_two_title_part_one') %>&nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                             </a>
                           </h4>
                         </div>
@@ -350,7 +355,7 @@
                         <div class="panel-heading" role="tab" id="headingNine">
                           <h4 class="panel-title">
                             <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                              <%=t('.voide_body_part_two_title_part_two') %>
+                              <%=t('.voide_body_part_two_title_part_two') %>&nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                             </a>
                           </h4>
                         </div>
@@ -367,7 +372,7 @@
                         <div class="panel-heading" role="tab" id="headingTen">
                           <h4 class="panel-title">
                             <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                              <%=t('.voide_body_part_two_title_part_three') %>
+                              <%=t('.voide_body_part_two_title_part_three') %>&nbsp;<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                             </a>
                           </h4>
                         </div>
@@ -398,21 +403,123 @@
 
       </div>
 
-      <div class="section partners">
-        <div class="intro container">
-          <div class="row">
-            <div class="col-lg-12">
-              <h1><%= t('.partners')%></h1>
+  <div class="section cisco">
+    <div class="intro container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>Akademia CISCO</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4">
+          <%= image_tag "us/cisco.png", height: '150', width: '300', class: 'cisco_image'%>
+        </div>
+        <div class="col-lg-8">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <p id="cisco_body">
+                Lokalna akademia CISCO w Zakładzie Systemów Komputerowych została utworzona we współpracy z regionalną akademią w Bielsku Białej.
+                Zajęcia prowadzone są przez doświadczonych administratorów sieci komputerowych, posiadających odpowiednie certyfikaty zawodowe oraz certyikat CCAI (Cisco Certified Academy Instructor).
+                Opanowanie treści programowych jest wystarczającą podstawą do zaliczenia egzaminu certyfikującego na pierwszy stopień zawodowy Cisco - Cisco Certified Networking Associate.
+              </p>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-4"><a href="http://mit.us.edu.pl/cms/"><%= image_tag "us/logo2.png", height: 200, width: 200 %></a></div>
-            <div class="col-lg-4"><a href="https://www.us.edu.pl/"><%= image_tag "us/lol.jpg", height: 200, width: 300 %></a></div>
-            <div class="col-lg-4"><a href="http://www.biometrics.us.edu.pl/"><%= image_tag "us/biometrics logo.gif", height: 200, width: 200 %></a></div>
           </div>
         </div>
       </div>
+
+      <div class="row cisco_contact">
+        <div class="col-lg-4">
+          <h2>Kontakt</h2><br>
+          <address>
+            <strong><p>Andrzej Mazurek</p></strong><br>
+            <p>andrzej.mazurek@us.edu.pl</p><br>
+            <abbr title="Phone">Tel:</abbr> (32) 3689735
+          </address>
+        </div>
+        <div class="col-lg-8">
+          <h2>Szkolenia obejmują</h2>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="well well-sm">Model OSI </div>
+              <div class="well well-sm">Ethernet 10/100/1000/10G  </div>
+              <div class="well well-sm">TCP/IP </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="well well-sm">Adresacja IP  </div>
+              <div class="well well-sm">Routing i podsieci  </div>
+              <div class="well well-sm">Sieci WAN i Routery </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="well well-sm">Cisco Discovery Protocol </div>
+              <div class="well well-sm">System IOS </div>
+              <div class="well well-sm">Routing statyczny </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
   </div>
+
+  <div class="section galeria">
+    <div class="intro container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>Galeria</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3">
+          <a href="<%= image_path "us/cisco.png" %>" data-lightbox="image-1" data-title="My caption">
+            <%= image_tag "us/cisco.png", height: '200', width: '300', class: 'cisco_image img-rounded'%>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="<%= image_path "us/Instytut-Informatykiii.jpg" %>" data-lightbox="image-1" data-title="My caption">
+            <%= image_tag "us/Instytut-Informatykiii.jpg", height: '200', width: '300', class: 'cisco_img img-rounded'%>
+          </a>
+
+        </div>
+        <div class="col-lg-3">
+          <%= image_tag "us/Instytut-Informatykiii.jpg", height: '200', width: '300', class: 'cisco_image img-rounded'%>
+        </div>
+        <div class="col-lg-3">
+          <%= image_tag "us/Instytut-Informatykiii.jpg", height: '200', width: '300', class: 'cisco_image img-rounded'%>
+        </div>
+        <div class="col-lg-3">
+          <%= image_tag "us/Instytut-Informatykiii.jpg", height: '200', width: '300', class: 'cisco_image'%>
+        </div>
+        <div class="col-lg-3">
+          <%= image_tag "us/Instytut-Informatykiii.jpg", height: '200', width: '300', class: 'cisco_image'%>
+        </div>
+        <div class="col-lg-3">
+          <%= image_tag "us/Instytut-Informatykiii.jpg", height: '200', width: '300', class: 'cisco_image'%>
+        </div>
+        <div class="col-lg-3">
+          <%= image_tag "us/Instytut-Informatykiii.jpg", height: '200', width: '300', class: 'cisco_image'%>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section partners">
+    <div class="intro container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1><%= t('.partners')%></h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4"><a href="http://mit.us.edu.pl/cms/"><%= image_tag "us/logo2.png", height: 200, width: 200 %></a></div>
+        <div class="col-lg-4"><a href="https://www.us.edu.pl/"><%= image_tag "us/lol.jpg", height: 200, width: 300 %></a></div>
+        <div class="col-lg-4"><a href="http://www.biometrics.us.edu.pl/"><%= image_tag "us/biometrics logo.gif", height: 200, width: 200 %></a></div>
+      </div>
+    </div>
+  </div>
+
+ </div>
 </body>
 
 
@@ -427,8 +534,8 @@
         });
 
         $('#fullpage').fullpage({
-            sectionsColor: ['#1bbc9b', '#CC0000', '#00B2B2', '#FFFFFF'],
-            anchors: ['firstPage', 'secondPage', '3rdPage','4thPage'],
+            sectionsColor: ['#1bbc9b', '#CC0000', '#00B2B2', '#207AA0','#434D5A', '#FFFFFF'],
+            anchors: ['firstPage', 'secondPage', '3rdPage','4thPage','5thPage','6thPage'],
             menu: '#menu',
             autoScrolling: false,
             fitToSection: false,
@@ -442,9 +549,13 @@
                 var animation = "animated shake";
                 var animationStop = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
                 if(index==2 && slideIndex==2){
-                    $('.slide-content h1').addClass(animation).one(animationStop,function(){
-                        $(this).removeClass(animation);
-                    });
+                    $('.arrow_image').addClass(animation);
+                }
+                else if(index==2 && slideIndex ==1){
+                    $('.finger_one, .finger_two').addClass("animated pulse");
+                }
+                else if(index==2 && slideIndex ==3){
+                    $('.voice_image').addClass('animation tada');
                 }
             }
 

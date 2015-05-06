@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 1.2'
 
 gem "paperclip", "~> 4.2"
 
+gem 'lightbox2-rails'
+
 
 
 group :doc do

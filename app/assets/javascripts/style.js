@@ -15,5 +15,9 @@ $(document).ready(function(){
         $.fn.fullpage.moveTo(2, 3);
     });
 
+    setInterval(function() {
+        $.fn.fullpage.moveTo(1);
+    }, 60000);
+
 
 });

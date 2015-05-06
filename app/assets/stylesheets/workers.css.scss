@@ -3,9 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #set_locale{
-  position: relative ;
-  right:-525px;
-  top: 250px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
   width: 200px;
   padding:3px;
   margin: 0;
@@ -21,4 +21,7 @@
   outline:none;
   display: inline-block;
   cursor:pointer;
+  z-index: 999;
 }
+
+
