@@ -70,3 +70,11 @@ en:
       voice_body_part_two_body_part_three_text_part_one: "speaker-dependent"
       voice_body_part_two_body_part_three_text_part_two: "dependent speaker group"
       voice_body_part_two_body_part_three_text_part_three: "independent of the speaker"
+      cisco: "CISCO"
+      cisco_contact: "Contact"
+      cisco_body: "Local CISCO Academy in the Department of Computer Systems was created in collaboration
+      with the regional academy in Bielsko-Biala. Classes are taught by experienced administrators of computer networks,
+      with appropriate professional qualifications and certyikat CCAI (Cisco Certified Academy Instructor). Mastery of curriculum content is
+      sufficient basis to pass the certification exam at the first professional degree Cisco - Cisco Certified Networking Associate."
+      cisco_training: "The training covers:"
+      gallery: "Gallery"

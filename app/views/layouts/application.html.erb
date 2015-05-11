@@ -30,14 +30,14 @@
   <li data-menuanchor="firstPage"><a href="#firstPage"><%= t('.film') %></a></li>
   <li data-menuanchor="secondPage"><a href="#secondPage"><%= t('.title') %></a></li>
   <li data-menuanchor="3rdPage"><a href="#3rdPage"><%= t('.workers') %></a></li>
-  <li data-menuanchor="4thPage"><a href="#4thPage">Akademia CISCO</a></li>
-  <li data-menuanchor="5thPage"><a href="#5thPage">Fotki</a></li>
+  <li data-menuanchor="4thPage"><a href="#4thPage"><%= t('.cisco')%></a></li>
+  <li data-menuanchor="5thPage"><a href="#5thPage"><%= t('.gallery')%></a></li>
   <li data-menuanchor="6thPage"><a href="#6thPage"><%= t('.partners') %></a></li>
 </ul>
 
 <div id="fullpage">
   <div class="section" id="filmowa">
-    <video autoplay loop muted controls="true" id="myVideo">
+    <video autoplay loop muted  id="myVideo">
       <source src=<%= asset_path 'film.mp4' %> type="video/mp4">
     </video>
   </div>
@@ -396,7 +396,7 @@
       <div class="section">
 
         <div class="intro">
-          <h1><%= t('.workers')%></h1>
+          <h1 id="workers_head"><%= t('.workers')%></h1>
         </div>
 
         <%= yield %>
@@ -407,7 +407,7 @@
     <div class="intro container">
       <div class="row">
         <div class="col-lg-12">
-          <h1>Akademia CISCO</h1>
+          <h1><%= t('.cisco')%></h1>
         </div>
       </div>
 
@@ -419,9 +419,7 @@
           <div class="panel panel-default">
             <div class="panel-body">
               <p id="cisco_body">
-                Lokalna akademia CISCO w Zakładzie Systemów Komputerowych została utworzona we współpracy z regionalną akademią w Bielsku Białej.
-                Zajęcia prowadzone są przez doświadczonych administratorów sieci komputerowych, posiadających odpowiednie certyfikaty zawodowe oraz certyikat CCAI (Cisco Certified Academy Instructor).
-                Opanowanie treści programowych jest wystarczającą podstawą do zaliczenia egzaminu certyfikującego na pierwszy stopień zawodowy Cisco - Cisco Certified Networking Associate.
+                <%= t('.cisco_body') %>
               </p>
             </div>
           </div>
@@ -430,7 +428,7 @@
 
       <div class="row cisco_contact">
         <div class="col-lg-4">
-          <h2>Kontakt</h2><br>
+          <h2><%= t('.cisco_contact')%></h2><br>
           <address>
             <strong><p>Andrzej Mazurek</p></strong><br>
             <p>andrzej.mazurek@us.edu.pl</p><br>
@@ -438,7 +436,7 @@
           </address>
         </div>
         <div class="col-lg-8">
-          <h2>Szkolenia obejmują</h2>
+          <h2><%= t('.cisco_training')%></h2>
           <div class="row">
             <div class="col-lg-4">
               <div class="well well-sm">Model OSI </div>
@@ -467,38 +465,38 @@
     <div class="intro container">
       <div class="row">
         <div class="col-lg-12">
-          <h1>Galeria</h1>
+          <h1><%= t('.gallery')%></h1>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-3">
           <a href="<%= image_path "us/cisco.png" %>" data-lightbox="image-1" data-title="My caption">
-            <%= image_tag "us/cisco.png", height: '200', width: '300', class: 'cisco_image img-rounded'%>
+            <%= image_tag "us/cisco.png", height: '135', width: '250', class: 'cisco_image img-rounded'%>
           </a>
         </div>
         <div class="col-lg-3">
           <a href="<%= image_path "us/Instytut-Informatykiii.jpg" %>" data-lightbox="image-1" data-title="My caption">
-            <%= image_tag "us/Instytut-Informatykiii.jpg", height: '200', width: '300', class: 'cisco_img img-rounded'%>
+            <%= image_tag "us/Instytut-Informatykiii.jpg", height: '135', width: '250', class: 'cisco_img img-rounded'%>
           </a>
 
         </div>
         <div class="col-lg-3">
-          <%= image_tag "us/Instytut-Informatykiii.jpg", height: '200', width: '300', class: 'cisco_image img-rounded'%>
+          <%= image_tag "us/Instytut-Informatykiii.jpg", height: '135', width: '250', class: 'cisco_image img-rounded'%>
         </div>
         <div class="col-lg-3">
-          <%= image_tag "us/Instytut-Informatykiii.jpg", height: '200', width: '300', class: 'cisco_image img-rounded'%>
+          <%= image_tag "us/Instytut-Informatykiii.jpg", height: '135', width: '250', class: 'cisco_image img-rounded'%>
         </div>
         <div class="col-lg-3">
-          <%= image_tag "us/Instytut-Informatykiii.jpg", height: '200', width: '300', class: 'cisco_image'%>
+          <%= image_tag "us/Instytut-Informatykiii.jpg", height: '135', width: '250', class: 'cisco_image img-rounded'%>
         </div>
         <div class="col-lg-3">
-          <%= image_tag "us/Instytut-Informatykiii.jpg", height: '200', width: '300', class: 'cisco_image'%>
+          <%= image_tag "us/Instytut-Informatykiii.jpg",height: '135', width: '250', class: 'cisco_image img-rounded'%>
         </div>
         <div class="col-lg-3">
-          <%= image_tag "us/Instytut-Informatykiii.jpg", height: '200', width: '300', class: 'cisco_image'%>
+          <%= image_tag "us/Instytut-Informatykiii.jpg", height: '135', width: '250', class: 'cisco_image img-rounded'%>
         </div>
         <div class="col-lg-3">
-          <%= image_tag "us/Instytut-Informatykiii.jpg", height: '200', width: '300', class: 'cisco_image'%>
+          <%= image_tag "us/Instytut-Informatykiii.jpg", height: '135', width: '250', class: 'cisco_image img-rounded'%>
         </div>
       </div>
     </div>
@@ -534,10 +532,10 @@
         });
 
         $('#fullpage').fullpage({
-            sectionsColor: ['#1bbc9b', '#CC0000', '#00B2B2', '#207AA0','#434D5A', '#FFFFFF'],
+            sectionsColor: ['#1bbc9b', '#CC0000', '#808080', '#207AA0','#434D5A', '#FFFFFF'],
             anchors: ['firstPage', 'secondPage', '3rdPage','4thPage','5thPage','6thPage'],
             menu: '#menu',
-            autoScrolling: false,
+            autoScrolling: true,
             fitToSection: false,
             afterRender: function(){
 

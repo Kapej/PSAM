@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container admin_index">
 
   <div class="row admin-title">
     <div class="col-lg-12">
@@ -8,7 +8,7 @@
 
   <div class="row admin-data">
     <div class="col-lg-12">
-      <table class="table table striped">
+      <table class="table table-striped">
         <tr class="info">
           <th>imie</th>
           <th>nazwisko</th>
@@ -20,7 +20,7 @@
           <th>zdjecie</th>
           <th>opcje</th>
         </tr>
-        <%@worker. each do |pracownik| %>
+        <%@worker.each do |pracownik| %>
             <tr>
               <td><%=pracownik.imie %></td>
               <td><%=pracownik.nazwisko %></td>
@@ -29,7 +29,7 @@
               <td><%=pracownik.email %></td>
               <td><%=pracownik.wydzial %></td>
               <td><%=pracownik.staz_pracy %></td>
-              <td><%=image_tag pracownik.zdjecie.url(:thumb) %></td>
+              <td><%=image_tag pracownik.zdjecie.url, height: '100', width: '80' %></td>
               <td>
                 <%= link_to("Edytuj", {:controller => 'workers', :action => :edit, :id => pracownik.id}, class: 'btn btn-xs btn-success') %>
                 <%= link_to("Usuń", {:controller => 'workers', :action => :delete, :id => pracownik.id}, class: 'btn btn-xs btn-danger') %>
@@ -43,8 +43,8 @@
 
   <div class="row">
     <div class="col-lg-12 button-new">
-      <%= link_to("Dodaj nowego pracownika", {:controller => "workers", :action => "new"}, :class => "btn btn-large btn-info") %>
-      <%= link_to("Wyloguj", {:action => "logout"}, :class => "btn btn-large btn-danger") %>
+      <%= link_to("Dodaj nowego pracownika", {:controller => "workers", :action => "new"}, :class => "btn btn-large btn-info btn-index") %>
+      <%= link_to("Wyloguj", {:action => "logout"}, :class => "btn btn-large btn-danger btn-index") %>
     </div>
   </div>
 </div>

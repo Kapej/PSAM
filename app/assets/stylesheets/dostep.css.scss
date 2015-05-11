@@ -38,6 +38,7 @@
 .admin-title{
   font-size: 50%;
   text-align: center;
+  margin-top:30px;
 }
 
 .new-head h1{
@@ -46,3 +47,12 @@
   margin-bottom: 15px;
 }
 
+
+.admin_index{
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.btn-index{
+  margin-bottom: 20px;
+}

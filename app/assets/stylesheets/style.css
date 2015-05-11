@@ -1,3 +1,7 @@
+html, body{
+    overflow: auto;
+}
+
 body{
     font-family: 'Open Sans', sans-serif;
 }
@@ -66,7 +70,7 @@ background-color: #ffffff;
     width: 100%;
     height: 100%;
     background-size: 100% 100%;
-    background: black url("app/assets/images/film.mp4") center center;
+    background: black center center;
     /* in case the video doesn't fit the whole page*/
     background-size: contain;
     object-fit: fill; /*cover video background */
@@ -99,7 +103,13 @@ background-color: #ffffff;
 }
 
 .modalne-opisy img{
-    margin: 30px 15px;
+    display: block;
+   margin: auto auto;
+}
+
+img.map_image{
+    display: block;
+    margin: auto auto;
 }
 
 .labels-center{
@@ -199,19 +209,25 @@ background-color: #ffffff;
     margin-top: -150px;
 }
 
-.galeria img{
-    padding: 30px 50px;
+.galeria img {
+    margin-bottom: 25px;
 }
 
-.galeria img:hover{
+.galeria img:hover {
     background-color: #434D5A;
-    border-radius: 15px;
-
 }
 
 .biometric_images{
     margin-top: 30px;
 }
+
+.staff_photo img{
+    margin-bottom: 30px;
+}
+
+.admin-index button{
+     display: inline-block;
+ }
 
 
 

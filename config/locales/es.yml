@@ -49,6 +49,15 @@ es:
       voice_body_part_two_body_part_three_text_part_one: "zależne od mówcy"
       voice_body_part_two_body_part_three_text_part_two: "zależne od grupy mówców"
       voice_body_part_two_body_part_three_text_part_three: "niezależne od mówcy"
+      cisco: "Akademia CISCO"
+      cisco_contact: "Kontakt"
+      cisco_body: "Lokalna akademia CISCO w Zakładzie Systemów Komputerowych została utworzona
+       we współpracy z regionalną akademią w Bielsku Białej. Zajęcia prowadzone są przez doświadczonych
+        administratorów sieci komputerowych, posiadających odpowiednie certyfikaty zawodowe oraz certyikat CCAI
+        (Cisco Certified Academy Instructor). Opanowanie treści programowych jest wystarczającą podstawą do zaliczenia egzaminu
+         certyfikującego na pierwszy stopień zawodowy Cisco - Cisco Certified Networking Associate."
+      cisco_training: "Szkolenia obejmują:"
+      gallery: "Galeria"
 
 
 

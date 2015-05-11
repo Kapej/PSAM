@@ -19,6 +19,10 @@
     <%= f.label :nazwisko %><br>
     <%= f.text_field :nazwisko, class: 'form-control' %>
   </div>
+   <div class="field">
+      <%= f.label :title %><br>
+      <%= f.text_field :title, class: 'form-control' %>
+   </div>
   <div class="field">
     <%= f.label :stanowisko %><br>
     <%= f.text_field :stanowisko, class: 'form-control' %>
@@ -43,6 +47,10 @@
     <%= f.label :zdjecie %><br>
     <%= f.file_field :zdjecie, class: 'form-control' %>
   </div>
+   <div class="field">
+      <%= f.label :route %><br>
+      <%= f.file_field :route, class: 'form-control' %>
+   </div>
   <div class="actions">
     <%= f.submit 'Zatwierdz', class: 'btn btn-success' %>
   </div>
