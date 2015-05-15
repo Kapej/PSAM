@@ -590,11 +590,6 @@
 
 <script>
     $(document).ready(function() {
-        console.log("yes");
-        $(".pracownik").on('click',function(){
-            alert("klikniete");
-        });
-
         $('#fullpage').fullpage({
             sectionsColor: ['#1bbc9b', '#CC0000', '#808080', '#207AA0','#434D5A', '#FFFFFF'],
             anchors: ['firstPage', 'secondPage', '3rdPage','4thPage','5thPage','6thPage'],
@@ -602,10 +597,8 @@
             autoScrolling: true,
             fitToSection: false,
             afterRender: function(){
-
-
                 //playing the video
-                $('video').get(0).play();
+                $('#myVideo').get(0).play();
             },
             afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
                 var animation = "animated shake";

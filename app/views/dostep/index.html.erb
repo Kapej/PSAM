@@ -30,9 +30,9 @@
               <td><%=pracownik.wydzial %></td>
               <td><%=pracownik.staz_pracy %></td>
               <td><%=image_tag pracownik.zdjecie.url, height: '100', width: '80' %></td>
-              <td>
-                <%= link_to("Edytuj", {:controller => 'workers', :action => :edit, :id => pracownik.id}, class: 'btn btn-xs btn-success') %>
-                <%= link_to("Usuń", {:controller => 'workers', :action => :delete, :id => pracownik.id}, class: 'btn btn-xs btn-danger') %>
+              <td id="buttons_place">
+                <%= link_to("Edytuj", {:controller => 'workers', :action => :edit, :id => pracownik.id}, class: 'btn btn-xs btn-success btn-worker-left') %>
+                <%= link_to("Usuń", {:controller => 'workers', :action => :delete, :id => pracownik.id}, class: 'btn btn-xs btn-danger btn-worker-right') %>
               </td>
 
             </tr>

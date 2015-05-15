@@ -61,7 +61,7 @@ class WorkersController < ApplicationController
   def kasuj
     worker = Worker.find(params[:id]).destroy
     flash[:notice] = "Pracownik została pomyślnie usunięta"
-    redirect_to(:action=>'index')
+    redirect_to(admin_path)
   end
 
   # DELETE /workers/1
