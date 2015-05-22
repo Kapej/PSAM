@@ -33,6 +33,7 @@
   <li data-menuanchor="4thPage"><a href="#4thPage"><%= t('.cisco')%></a></li>
   <li data-menuanchor="5thPage"><a href="#5thPage"><%= t('.gallery')%></a></li>
   <li data-menuanchor="6thPage"><a href="#6thPage"><%= t('.partners') %></a></li>
+  <li data-menuanchor="7thPage"><a href="#7thPage">Gra</a></li>
 </ul>
 
 <div id="fullpage">
@@ -778,6 +779,15 @@
     </div>
   </div>
 
+  <div class="section">
+    <div class="row">
+      <div class="col-lg-12">
+        <iframe src="http://localhost:8080/dist/" width="75%" height="800px" frameborder="0" allowtransparency="true"></iframe>
+      </div>
+    </div>
+
+  </div>
+
  </div>
 </body>
 
@@ -852,8 +862,8 @@
 <script>
     $(document).ready(function() {
         $('#fullpage').fullpage({
-            sectionsColor: ['#1bbc9b', '#CC0000', '#808080', '#207AA0','#995C1F', '#FFFFFF'],
-            anchors: ['firstPage', 'secondPage', '3rdPage','4thPage','5thPage','6thPage'],
+            sectionsColor: ['#1bbc9b', '#CC0000', '#808080', '#207AA0','#995C1F', '#FFFFFF','#222222'],
+            anchors: ['firstPage', 'secondPage', '3rdPage','4thPage','5thPage','6thPage','7thPage'],
             menu: '#menu',
             autoScrolling: true,
             fitToSection: false,
