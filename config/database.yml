@@ -23,10 +23,10 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: slaski
+  database: slaskiTEST
   pool: 5
   username: root
-  password:
+  password: kursphp
   host: localhost
 
 production:

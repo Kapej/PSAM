@@ -10,10 +10,6 @@ PSAM::Application.routes.draw do
     match ':controller(/:action(/:id))', :via => [:get, :post]
   end
 
-
-
-
-
     get 'dodaj/ziomeczka', to: 'workers#new'
 
 
