@@ -243,6 +243,15 @@ img.map_image{
     font-size: 25px;
 }
 
+#ciscoIMG:hover{
+    background-color: #207AA0;
+}
+
+#modalCISKO .modal-dialog  {width:75%;}
+#modalBIO .modal-dialog  {width:75%;}
+#modalUS .modal-dialog  {width:75%;}
+#modalMIT .modal-dialog  {width:75%;}
+
 
 
 
