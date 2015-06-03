@@ -7,7 +7,7 @@ pl:
                                       ludzi na podstawie ich cech fizycznych. Przykładem urządzeń do pomiarów biometrycznych na podstawie których można identyfikować
                                       konkretne osoby jest system rozpoznawania tęczówki oka rejestrujący obraz tęczówki oka."
       workers: "Pracownicy"
-      partners: "Partnerzy"
+      partners: "Linki"
       film: "Film"
       finger_title: "Odciski palców"
       finger_title_part_one: "Analiza odcisków linii papilarnych"
@@ -63,6 +63,9 @@ pl:
       kianto: "Wizyta Tapio Kianto z Finlandii"
       mit: "Konferencja MIT"
       game: "Gra"
+      tool1title: "Model odniesienia łączenia systemów otwartych – standard zdefiniowany przez ISO oraz ITU-T opisujący strukturę komunikacji sieciowej."
+      tool4title: "W protokole IP liczba nadawana interfejsowi sieciowemu, grupie interfejsów (broadcast, multicast), bądź całej sieci komputerowej"
+      tool7title: "Jest to protokół dający dostęp do podsumowania konfiguracji innych bezpośrednio połączonych routerów lub przełączników."
 
 
 

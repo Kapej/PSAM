@@ -31,8 +31,9 @@ $(document).ready(function(){
         $.fn.fullpage.moveTo(5, 4);
     });
 
-    var esc = $.Event("keydown", {
-        keyCode: 27
-    });
+    Tipped.create('#tool1',{ position: 'top',size: 'large',maxWidth:300 });
+    Tipped.create('#tool4',{ position: 'top',size: 'large',maxWidth:300 });
+    Tipped.create('#tool7',{ position: 'top',size: 'large',maxWidth:300 });
+    Tipped.create('#ethernet',{ position: 'left',size: 'large' });
 
 });

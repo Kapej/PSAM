@@ -28,7 +28,7 @@ en:
                                                     people based on their physical characteristics. An example of a device for measuring biometric which it can be identified
                                                     specific person's iris recognition system recording the image of the iris."
       workers: "Staff"
-      partners: "Partners"
+      partners: "Links"
       film: "Movie"
       finger_title: "Fingerprints"
       finger_title_part_one: "Analysis of fingerprints"
@@ -83,3 +83,6 @@ en:
       kianto: "Tapio Kianto visit"
       mit: "MIT Conference"
       game: "Game"
+      tool1title: "Combining the reference model of open systems - standard defined by ISO and ITU-T describes the structure of the network communication."
+      tool4title: "The IP number of broadcast network interface, interface group (broadcast, multicast), or the entire computer network"
+      tool7title: "It is a protocol that gives access to other configuration summary directly connected routers or switches."
