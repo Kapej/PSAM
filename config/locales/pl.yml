@@ -1,4 +1,4 @@
-es:
+pl:
 
   layouts:
     application:
@@ -62,6 +62,7 @@ es:
       klaster: "Budowa klaster obliczeniowego"
       kianto: "Wizyta Tapio Kianto z Finlandii"
       mit: "Konferencja MIT"
+      game: "Gra"
 
 
 

@@ -33,7 +33,7 @@
   <li data-menuanchor="4thPage"><a href="#4thPage"><%= t('.cisco')%></a></li>
   <li data-menuanchor="5thPage"><a href="#5thPage"><%= t('.gallery')%></a></li>
   <li data-menuanchor="6thPage"><a href="#6thPage"><%= t('.partners') %></a></li>
-  <li data-menuanchor="7thPage"><a href="#7thPage">Gra</a></li>
+  <li data-menuanchor="7thPage"><a href="#7thPage"><%= t('.game') %></a></li>
 </ul>
 
 <div id="fullpage">
@@ -866,7 +866,7 @@
             anchors: ['firstPage', 'secondPage', '3rdPage','4thPage','5thPage','6thPage','7thPage'],
             menu: '#menu',
             autoScrolling: true,
-            fitToSection: false,
+            fitToSection: true,
             afterRender: function(){
                 //playing the video
                 $('#myVideo').get(0).play();
