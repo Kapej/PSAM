@@ -34,6 +34,12 @@ $(document).ready(function(){
     Tipped.create('#tool1',{ position: 'top',size: 'large',maxWidth:300 });
     Tipped.create('#tool4',{ position: 'top',size: 'large',maxWidth:300 });
     Tipped.create('#tool7',{ position: 'top',size: 'large',maxWidth:300 });
-    Tipped.create('#ethernet',{ position: 'left',size: 'large' });
+    Tipped.create('#tool2',{ position: 'left',size: 'large',maxWidth:300 });
+    Tipped.create('#tool5',{ position: 'bottom',size: 'large',maxWidth:300 });
+    Tipped.create('#tool8',{ position: 'right',size: 'large',maxWidth:300 });
+    Tipped.create('#tool3',{ position: 'bottom',size: 'large',maxWidth:300 });
+    Tipped.create('#tool9',{ position: 'bottom',size: 'large',maxWidth:300 });
+    Tipped.create('#tool6',{ position: 'bottom',size: 'large',maxWidth:300 });
+
 
 });

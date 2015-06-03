@@ -64,8 +64,14 @@ pl:
       mit: "Konferencja MIT"
       game: "Gra"
       tool1title: "Model odniesienia łączenia systemów otwartych – standard zdefiniowany przez ISO oraz ITU-T opisujący strukturę komunikacji sieciowej."
+      tool2title: "Technika, w której zawarte są standardy wykorzystywane w budowie głównie lokalnych sieci komputerowych. Obejmuje ona specyfikację przewodów oraz przesyłanych nimi sygnałów."
+      tool3title: "Teoretyczny model warstwowej struktury protokołów komunikacyjnych. Model TCP/IP został stworzony w latach 70. XX wieku w DARPA, aby pomóc w tworzeniu odpornych na atak sieci komputerowych."
       tool4title: "W protokole IP liczba nadawana interfejsowi sieciowemu, grupie interfejsów (broadcast, multicast), bądź całej sieci komputerowej"
+      tool5title: "W informatyce wyznaczanie trasy i wysyłanie nią pakietu danych w sieci komputerowej. Urządzenie węzłowe, w którym kształtowany jest ruch sieciowy, nazywane jest routerem."
+      tool6title: " Sieć komputerowa znajdująca się na obszarze wykraczającym poza jedno miasto (bądź kompleks miejski)."
       tool7title: "Jest to protokół dający dostęp do podsumowania konfiguracji innych bezpośrednio połączonych routerów lub przełączników."
+      tool8title: " To sieć z komutacją pakietów, używana do łączenia odległych sieci lokalnych (LAN), przesyłania danych, obrazu i głosu oraz dostępu do Internetu."
+      tool9title: "Routing statyczny wydaje się najprostszą formą budowania informacji o topologii sieci. Administrator wprowadza ręcznie trasy definiujące routing statyczny, przy tworzeniu których wymagane jest jedynie podanie adresu sieci docelowej."
 
 
 
