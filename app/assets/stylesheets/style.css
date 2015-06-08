@@ -29,7 +29,7 @@ h1{
 font-size: 17px;
 }
 .partial-describe p{
-    font-size:15px;
+    font-size:17px;
     color: black;
 }
 
@@ -48,6 +48,10 @@ font-size: 17px;
 
 .circle-mark{
     list-style-type: circle;
+}
+.circle-mark li{
+    font-size: 15px;
+    margin-left: 10px;
 }
 
 .partners h1{
@@ -251,6 +255,10 @@ img.map_image{
 #modalBIO .modal-dialog  {width:75%;}
 #modalUS .modal-dialog  {width:75%;}
 #modalMIT .modal-dialog  {width:75%;}
+
+div.well:hover{
+    cursor: pointer;
+}
 
 
 
