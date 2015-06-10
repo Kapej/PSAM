@@ -5,6 +5,7 @@ class WorkersController < ApplicationController
   # GET /workers
   # GET /workers.json
   def index
+    @time = Time.new
     if params[:set_locale]
       redirect_to home_path(locale: params[:set_locale])
     end
@@ -49,7 +50,7 @@ class WorkersController < ApplicationController
         format.html { redirect_to admin_path, notice: 'Worker was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        format.html { render action: 'edit', :layout => "dodawanie" }
         format.json { render json: @worker.errors, status: :unprocessable_entity }
       end
     end
