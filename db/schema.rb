@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20150506215537) do
     t.datetime "updated_at"
   end
 
-  add_index "uzytkowniks", ["uzytkownik"], name: "index_uzytkowniks_on_uzytkownik", using: :btree
+  add_index "uzytkowniks", ["uzytkownik"], name: "index_uzytkowniks_on_uzytkownik"
 
   create_table "workers", force: true do |t|
     t.string   "imie"
